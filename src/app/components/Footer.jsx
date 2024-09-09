@@ -90,7 +90,7 @@ const Footer = () => {
 
         {/* Social Media and Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-10">
-          <p className="text-sm">© 2024 MARKET MAVENS LTD all rights reserved.</p>
+          <p className="text-sm pb-3 md:pb-0">© 2024 MARKET MAVENS LTD all rights reserved.</p>
           <div className="flex space-x-2">
             {socialIcons.map((icon, index) => {
               const IconComponent = icon.component;
