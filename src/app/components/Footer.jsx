@@ -41,9 +41,9 @@ const Footer = () => {
         {/* Partners Section */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-5xl font-bold">Hands On Experience!</h2>
-          <div className="flex justify-center flex-wrap items-center mt-6 gap-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
             {logos.map((logo, index) => (
-              <img key={index} src={logo.src} alt={logo.alt} className="h-28 w-auto" />
+              <img key={index} src={logo.src} alt={logo.alt} className="h-28 w-auto mx-auto" />
             ))}
           </div>
         </div>
@@ -55,7 +55,6 @@ const Footer = () => {
             <Link href="/">
               <Image src="/white-logo.webp" alt="Logo" fill className="object-contain" />
             </Link>
-          
           </div>
 
           {/* Company Links */}

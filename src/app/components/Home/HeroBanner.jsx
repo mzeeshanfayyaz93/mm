@@ -17,8 +17,8 @@ const HeroBanner = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="relative lg:mt-0 lg:w-1/2 flex justify-center">
-          <div className="relative w-full h-96 md:h-[500px]">
+        <div className="relative lg:mt-0 lg:w-1/2 w-full flex justify-center">
+          <div className="relative w-full h-80 sm:h-96 md:h-[500px]">
             <Image
               src="/banner.webp" // Replace with the correct path of your image
               alt="Dashboard showing ROI and scalable growth"

@@ -3,7 +3,7 @@ import { FaCheckCircle } from 'react-icons/fa'; // Checkmark icon
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-[url(/bg-image.svg)] bg-cover bg-center text-white md:h-[450px] mt-16 mb-40">
+    <section className="bg-[url(/bg-image.svg)] bg-cover bg-center text-white md:h-[450px] mt-16 mb-10 md:mb-40">
       <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
         {/* Left Image Section */}
         <div className="relative lg:basis-1/3">
