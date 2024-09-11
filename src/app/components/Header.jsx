@@ -8,11 +8,11 @@ import Link from 'next/link';
 
 // Navigation Links
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'About Us', href: '#' },
-  { name: 'Marketing Consultancy', href: '#' },
-  { name: 'Risk Management', href: '#' },
-  { name: 'Technology Consultancy', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: 'about-us' },
+  { name: 'Marketing Consultancy', href: 'marketing-consultancy' },
+  { name: 'Risk Management', href: 'risk-management' },
+  { name: 'Technology Consultancy', href: 'technology-consultancy' },
   { name: 'Blogs', href: '#' },
 ];
 
