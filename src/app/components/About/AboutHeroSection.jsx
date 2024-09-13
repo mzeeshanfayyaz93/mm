@@ -20,7 +20,7 @@ const FintechSection = () => {
 
         {/* Left Text Section (shows second on mobile) */}
         <div className="lg:w-1/2 text-center lg:text-left lg:order-1">
-          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold text-[#080a62] mb-4">About Us</h1>
+          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold c mb-4">About Us</h1>
           <p className="text-lg font-semibold text-[#080a62] mb-4">
             Market Mavens was founded with a singular goal:
           </p>
