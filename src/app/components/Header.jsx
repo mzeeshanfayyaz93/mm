@@ -50,7 +50,7 @@ const Header = () => {
           ))}
              {/* Log in Button for Desktop */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="#" className="bg-primary rounded-full py-3 px-7 text-white shadow-2xl hover:bg-white hover:text-primary">
+          <Link href="/contact" className="bg-primary rounded-full py-3 px-7 text-white shadow-2xl hover:bg-white hover:text-primary">
             Contact Us
           </Link>
         </div>
@@ -93,7 +93,7 @@ const Header = () => {
                 </div>
                 <div className="py-6">
                   <Link
-                    href="#"
+                    href="/contact"
                     className="bg-gradient rounded-full py-3 px-5 text-white w-96"
                   >
                     Contact Us
