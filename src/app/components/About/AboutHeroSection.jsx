@@ -24,13 +24,13 @@ const FintechSection = () => {
           <p className="text-lg font-semibold text-[#080a62] mb-4">
             Market Mavens was founded with a singular goal:
           </p>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-base md:text-lg  mb-6">
             To provide online trading brokers with the expertise and tools needed to thrive in an increasingly competitive market.
           </p>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-base md:text-lg mb-8">
             Our team of seasoned professionals brings decades of combined experience in marketing, risk management, and technology consultancy, all aimed at driving measurable results and sustainable growth for our clients.
           </p>
-          <Link href="#" className="inline-block bg-gradient-to-r from-[#080a62] to-[#dc3d52] text-white font-semibold py-3 px-8 rounded-full text-lg">
+          <Link href="#" className="inline-block bg-gradient-to-r from-[#080a62] to-[#dc3d52] hover:bg-gradient-to-l text-white font-semibold py-3 px-8 rounded-full text-lg">
             Get Started Today
           </Link>
         </div>
