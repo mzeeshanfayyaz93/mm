@@ -1,6 +1,3 @@
-import AboutHeroSection from '../components/About/AboutHeroSection';
-import OverviewSection from '../components/About/OverviewSection';
-import FintechSection from '../components/About/FintechSection';
 import ContactUsHeroSection from '../components/ContactUs/Hero';
 
 
@@ -14,12 +11,6 @@ export default function ContactUs() {
   return (
     <main>
       <ContactUsHeroSection />
-      {/* <OverviewSection />
-      <FintechSection
-        title="Fintech is Our Realm!"
-        description="Our seasoned experts provide bespoke consultancy, exclusively empowering online trading brokers to thrive."
-        buttonText="Book a Consultation"
-      /> */}
     </main>
   );
 }

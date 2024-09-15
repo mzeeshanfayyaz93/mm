@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <section className="bg-white py-16 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+    <section className="bg-white py-10 md:py-0 mb-10">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between border-b border-gray-200">
         {/* Content Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h1 className="text-3xl md:text-5xl font-bold text-[#080a62] mb-4">
@@ -19,10 +19,10 @@ const HeroSection = () => {
         </div>
 
         {/* Image Section */}
-        <div className="lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
+        <div className="lg:w-1/2 hidden md:flex justify-center">
           <div className="relative w-full h-64 md:h-[500px]">
             <Image
-              src="/path-to-image/market-laptop.png" // Update with the actual image path
+              src="/blogs/Blogs-02.webp" // Update with the actual image path
               alt="Market Updates Laptop"
               fill
               className="object-contain"

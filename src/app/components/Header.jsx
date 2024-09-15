@@ -13,7 +13,7 @@ const navigation = [
   { name: 'Marketing Consultancy', href: 'marketing-consultancy' },
   { name: 'Risk Management', href: 'risk-management' },
   { name: 'Technology Consultancy', href: 'technology-consultancy' },
-  { name: 'Blogs', href: '#' },
+  { name: 'Blogs', href: 'blogs' },
 ];
 
 const Header = () => {
