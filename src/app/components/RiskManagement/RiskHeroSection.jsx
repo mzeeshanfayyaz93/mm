@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import GradientButton from '../common/GradientButton'
 
 const RiskHeroSection = () => {
     return (
@@ -12,9 +12,7 @@ const RiskHeroSection = () => {
                     <p className="text-lg mb-8">
                         Navigating the complex world of online trading requires a robust risk management strategy to protect your assets and ensure compliance with ever-changing regulations. Market Mavens provides comprehensive risk management solutions tailored to the unique needs of online trading brokers.
                     </p>
-                    <Link href="#" className="inline-block bg-gradient-to-r from-[#080a62] to-[#dc3d52] text-white font-semibold py-3 px-8 rounded-full text-lg">
-                        Get Started Today
-                    </Link>
+                    <GradientButton href="/contact" text="Get Started Today" />
                 </div>
                 <div className="lg:w-2/5 flex justify-center relative w-full order-1 lg:order-2">
                     <div className="relative w-full h-80 sm:h-96 md:h-[430px]">

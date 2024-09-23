@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import GradientButton from '../common/GradientButton'
 
 const HeroBanner = () => {
   return (
@@ -11,9 +11,7 @@ const HeroBanner = () => {
           <h1 className="text-3xl md:text-5xl xl:text-[55px] font-bold text-[#080a62] leading-tight mb-6 px-4 md:px-0">
             Expert-Led Strategies for Maximum ROI & Scalable Growth
           </h1>
-          <Link href="#" className="inline-block bg-gradient-to-r from-[#080a62] to-[#dc3d52] hover:bg-gradient-to-l text-white font-semibold py-3 px-8 rounded-full text-lg">
-            Get Started Today
-          </Link>
+          <GradientButton href="/contact" text="Get Started Today" />
         </div>
 
         {/* Right Image Section */}

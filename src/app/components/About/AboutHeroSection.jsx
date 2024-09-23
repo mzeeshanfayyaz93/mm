@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import GradientButton from '../common/GradientButton'
 
 const FintechSection = () => {
   return (
@@ -30,9 +30,7 @@ const FintechSection = () => {
           <p className="text-base md:text-lg mb-8">
             Our team of seasoned professionals brings decades of combined experience in marketing, risk management, and technology consultancy, all aimed at driving measurable results and sustainable growth for our clients.
           </p>
-          <Link href="#" className="inline-block bg-gradient-to-r from-[#080a62] to-[#dc3d52] hover:bg-gradient-to-l text-white font-semibold py-3 px-8 rounded-full text-lg">
-            Get Started Today
-          </Link>
+          <GradientButton href="/contact" text="Get Started Today" />
         </div>
       </div>
     </section>

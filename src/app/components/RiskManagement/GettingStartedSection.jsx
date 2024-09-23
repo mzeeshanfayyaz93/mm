@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import GradientButton from '../common/GradientButton'
 
 const GetStartedSection = () => {
     return (
@@ -8,9 +9,8 @@ const GetStartedSection = () => {
                 <p className="text-lg mb-8">
                     Schedule a free consultation with our risk management specialists to learn how we can fortify your operations against potential threats.
                 </p>
-                <Link href="/contact" className="bg-gradient-to-r from-[#080a62] to-[#dc3d52] text-white font-semibold py-3 px-8 rounded-full">
-                    Schedule Now
-                </Link>
+      
+                <GradientButton href="/contact" text="Schedule Now" />
             </div>
         </section>
     );

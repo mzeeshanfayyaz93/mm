@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import GradientButton from '../common/GradientButton'
 
 const TechnologyOptimization = () => {
   return (
@@ -13,9 +13,7 @@ const TechnologyOptimization = () => {
           <p className="text-md md:text-lg  mb-6">
             In the rapidly evolving fintech landscape, staying ahead technologically is not just an advantage; it's a necessity. Market Mavens specializes in enhancing trading platforms with the latest technological innovations, ensuring that your brokerage is equipped to meet the demands of modern traders. From improving system performance to integrating new features that enhance user experience, our technology consultancy services are designed to keep you at the forefront of the industry.
           </p>
-          <Link href="#" className="inline-block bg-gradient-to-r from-[#080a62] to-[#dc3d52] hover:bg-gradient-to-l text-white font-semibold py-3 px-8 rounded-full text-lg">
-            Get Started Today
-          </Link>
+          <GradientButton href="/contact" text="Get Started Today" />
         </div>
 
         {/* Image Section */}

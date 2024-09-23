@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import GradientButton from '../common/GradientButton'
 
 const FintechSection = ({ title, description, buttonText }) => {
   return (
@@ -13,12 +13,8 @@ const FintechSection = ({ title, description, buttonText }) => {
         </p>
         
         {/* Call to Action Button */}
-        <Link href="#" className="inline-block hover:bg-gradient-to-l bg-gradient-to-r from-[#080a62] to-[#dc3d52] text-white font-semibold py-3 px-8 rounded-full text-lg">
-
-        {buttonText}
-
-        </Link>
-
+         {/* Call-to-Action Button */}
+         <GradientButton href="/contact" text="Book a Consultation" />
       
       </div>
     </section>

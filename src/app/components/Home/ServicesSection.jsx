@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react';
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
 import Image from 'next/image';
@@ -13,7 +15,8 @@ const services = [
     textHoverColor: 'text-primary',
     linkColor: 'text-secondary',
     linkHoverColor: 'hover:text-primary',
-    icon: '/icon1.svg'
+    icon: '/icon1.svg',
+    hoverIcon: '/hover1.svg' // Add hover icon
   },
   {
     title: 'Risk Management',
@@ -24,7 +27,8 @@ const services = [
     textHoverColor: 'hover:text-white',
     linkColor: 'text-white',
     linkHoverColor: 'hover:text-white',
-    icon: '/icon2.svg'
+    icon: '/icon2.svg',
+    hoverIcon: '/hover2.svg' // Add hover icon
   },
   {
     title: 'Technology Consultancy',
@@ -35,11 +39,14 @@ const services = [
     textHoverColor: 'text-primary',
     linkColor: 'text-secondary',
     linkHoverColor: 'hover:text-primary',
-    icon: '/icon3.svg'
+    icon: '/icon3.svg',
+    hoverIcon: '/hover3.svg' // Add hover icon
   },
 ];
 
 const ServicesSection = () => {
+  const [hoverIndex, setHoverIndex] = useState(null); // State to track hover
+
   return (
     <section className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -55,12 +62,18 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className={`relative mb-8 flex flex-col lg:flex-row items-start md:items-center ${service.bgColor} rounded-2xl p-10 border-2 border-primary shadow-lg gap-4 md:gap-8 mb-16`}
+            className={`relative mb-8 flex flex-col lg:flex-row items-start md:items-center ${service.bgColor} rounded-2xl p-10 border-2 border-primary shadow-lg gap-4 md:gap-8 mb-16 transition-all duration-300`}
+            onMouseEnter={() => setHoverIndex(index)} // Set hover index
+            onMouseLeave={() => setHoverIndex(null)}  // Reset hover index
           >
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
-            <Image src={service.icon} width={80} height={80} alt={service.title} />
-              </div>
-          
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 transition-all duration-300">
+              <Image 
+                src={hoverIndex === index ? service.hoverIcon : service.icon} 
+                width={80} 
+                height={80} 
+                alt={service.title} 
+              />
+            </div>
             <div className={`lg:w-1/3 md:border-r-2 ${service.borderColor}`}>
               <h3 className={`text-2xl mb-0 font-bold w-48 ${service.textColor}`}>{service.title}</h3>
             </div>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import GradientButton from '../common/GradientButton'
 
 const CrisisManagementSection = () => {
     return (
@@ -9,9 +9,7 @@ const CrisisManagementSection = () => {
                     We are the experts you trust, delivering unparalleled <br />
                     consultancy services exclusively to the world of online trading.
                 </p>
-                <Link href="/contact" className="bg-gradient-to-r from-[#080a62] to-[#dc3d52] text-white font-semibold py-3 px-8 rounded-full">
-                   Get Started Now
-                </Link>
+                <GradientButton href="/contact" text="Get Started Today" />
             </div>
         </section>
     );
