@@ -62,7 +62,7 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className={`relative mb-8 flex flex-col lg:flex-row items-start md:items-center ${service.bgColor} rounded-2xl p-10 border-2 border-primary shadow-lg gap-4 md:gap-8 mb-16 transition-all duration-300`}
+            className={`relative mb-8 flex flex-col lg:flex-row items-start md:items-center ${service.bgColor} rounded-2xl p-10 border-2 border-primary shadow-lg gap-4 md:gap-8 mb-16 transition-all duration-300 cursor-pointer`}
             onMouseEnter={() => setHoverIndex(index)} // Set hover index
             onMouseLeave={() => setHoverIndex(null)}  // Reset hover index
           >
