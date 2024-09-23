@@ -52,7 +52,7 @@ const ServicesSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold text-[#080a62]">Our Services</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-[#080a62]">Our Services </h2>
           <p className="text-lg mt-4 text-gray-600">
             We empower online trading brokers to achieve unparalleled success. Our seasoned professionals deliver tailored marketing, risk management, and technology consultancy services designed to maximize ROI and drive scalable growth.
           </p>
