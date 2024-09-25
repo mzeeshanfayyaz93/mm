@@ -1,30 +1,34 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 const MarketingConsultancy = () => {
   return (
-    <section className="bg-gradient-to-b from-[#080a62] from-30%  to-secondary to-90% pt-16 md:px-4 text-white relative">
-      <div className="max-w-6xl mx-auto text-center lg:text-left">
-        {/* Title */}
-        <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-4 text-center md:leading-normal">
-          Elevate Your Brokerage’s Brand with{' '}
-          <span className="text-[#d73c52]">Expert Marketing Strategies</span>
-        </h1>
+    <section className="relative bg-[url(/home/banner.webp)] bg-cover bg-center bg-no-repeat text-white py-16 lg:py-32 3xl:py-36">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
+        {/* Left Section */}
+        <div className="lg:w-2/3 w-full text-center lg:text-left pt-20">
+          <h3 className="text-3xl md:text-6xl font-light leading-tight pb-2">
+          <b className='font-bold'>Elevate </b>Your <br></br>
+          Brokerage’s Brand with
+          </h3>
+          <h1 className="text-3xl md:text-[55px] xl:text-[85px] md:leading-[60px] xl:leading-[75px] pb-5 font-black text-secondary">
+            <span className="text-white">EXPERT </span> <br></br>
+            MARKETING STRATEGIES
+          </h1>
+          
+          <div className="mt-8 inline-block bg-white hover:bg-secondary text-[#0a0747] font-semibold py-4 px-8 rounded-full text-lg hover:border-white hover:text-white transition w-56 text-center">
+            <Link href="#" passHref>
+       
+                Talk to Us!
         
-        {/* Description */}
-        <p className="text-sm md:ext-lg xl:text-xl text-gray-300 mb-8 text-center p-5">
-          In the competitive world of online trading, standing out is essential. At Market Mavens, we specialize in crafting tailored marketing strategies that elevate your brokerage’s brand and drive high-quality client acquisition. With a focus on fintech, our data-driven approach ensures every campaign aligns with market demands, delivering measurable results. Whether launching, rebranding, or expanding, our seasoned professionals guide you every step of the way.
-        </p>
-      </div>
+            </Link>
+          </div>
+        </div>
 
-      {/* Image Section */}
-      <div className="relative mt-10 lg:mt-0 flex justify-center">
-        <div className="relative w-full h-40 md:h-[600px]">
-          <Image
-            src="/marketing/banner.webp" // Replace with the actual image path
-            alt="Trading Summary"
-           fill
-            className="object-contain"
-          />
+        {/* Right Section (Candlestick Chart) */}
+        <div className="hidden lg:block lg:w-1/3">
+          
         </div>
       </div>
     </section>

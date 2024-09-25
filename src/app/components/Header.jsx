@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
@@ -18,9 +18,28 @@ const navigation = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scroll position and change background when scrolling down
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="inset-x-0 top-0 z-50 bg-gradient py-2">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 py-2 transition-all duration-300 ${
+        isScrolled ? 'bg-gradient-to-r from-[#0a0747] to-[#aa165e]' : 'bg-transparent'
+      }`}
+    >
       <div className="container flex flex-row items-center justify-between">
         {/* Logo */}
         <div className="relative w-48 h-20">
@@ -48,15 +67,13 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
-             {/* Log in Button for Desktop */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/contact" className="bg-primary rounded-full py-3 px-7 text-white shadow-2xl hover:bg-white hover:text-primary">
-            Contact Us
-          </Link>
+          {/* Log in Button for Desktop */}
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <Link href="/contact" className="bg-primary rounded-full py-3 px-7 text-white shadow-2xl hover:bg-white hover:text-primary">
+              Contact Us
+            </Link>
+          </div>
         </div>
-        </div>
-
-     
 
         {/* Mobile Menu Dialog */}
         <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -92,10 +109,7 @@ const Header = () => {
                   ))}
                 </div>
                 <div className="py-6">
-                  <Link
-                    href="/contact"
-                    className="bg-gradient rounded-full py-3 px-5 text-white w-96"
-                  >
+                  <Link href="/contact" className="bg-gradient rounded-full py-3 px-5 text-white w-96">
                     Contact Us
                   </Link>
                 </div>

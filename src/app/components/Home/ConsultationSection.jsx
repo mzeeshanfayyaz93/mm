@@ -4,10 +4,11 @@ import GradientButton from '../common/GradientButton'
 const ConsultationSection = () => {
   return (
     <section className="bg-white py-10 px-4 mb-16">
-      <div className="max-w-5xl mx-auto text-center bg-[url(/3rd-image.svg)] bg-cover bg-center h-[330px]  pt-10 px-6 md:px-20 md:h-[262px]">
+      <div className="max-w-5xl mx-auto text-center pt-10 px-6 md:px-20 md:h-[262px]">
         {/* Heading */}
         <h2 className="text-2xl md:text-4xl font-bold text-[#080a62] mb-6 max-w-xl mx-auto">
-          Ready To Elevate Your Brokerage To New Heights?
+        Ready To Elevate Your<br></br>
+        Brokerage To New Heights?
         </h2>
 
         {/* Supporting Text */}

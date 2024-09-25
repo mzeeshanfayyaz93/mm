@@ -1,48 +1,77 @@
 import Image from 'next/image';
-import { FaCheckCircle } from 'react-icons/fa'; // Checkmark icon
 
-const WhyChooseUs = () => {
+const services = [
+  {
+    title: 'Fintech Experts',
+    description: 'We specialize exclusively in fintech, offering in-depth knowledge and targeted solutions designed for online trading brokers. Our deep understanding of the industry ensures that we provide consultancy services that are relevant, innovative, and impactful.',
+    icon: '/home/icons/Homepage-04.svg',  // Assuming you have an icon
+  },
+  {
+    title: 'Proven ROI-Driven Strategies',
+    description: 'We design strategies that ensure measurable growth and profitability for our clients.',
+    icon: '/home/icons/Homepage-11.svg',
+  },
+  {
+    title: 'Comprehensive Service Offering',
+    description: 'From consultancy to marketing and technology solutions, we offer a wide range of services.',
+    icon: '/home/icons/Homepage-12.svg',
+  },
+  {
+    title: 'Industry-Leading Technology Solutions',
+    description: 'We use cutting-edge technologies to build platforms that are robust and scalable.',
+    icon: '/home/icons/Homepage-13.svg',
+  },
+  {
+    title: 'Client-Centric Approach',
+    description: 'We ensure that our solutions are tailored to meet the specific needs of each client.',
+    icon: '/home/icons/Homepage-14.svg',
+  },
+  {
+    title: 'Trusted by Industry Leaders',
+    description: 'We have a track record of delivering exceptional results for industry leaders.',
+    icon: '/home/icons/Homepage-15.svg',
+  },
+];
+
+const WhyChooseUsSection = () => {
   return (
-    <section className="bg-[url(/bg-image.svg)] bg-cover bg-center text-white md:h-[450px] mt-16 mb-10 md:mb-40">
-      <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
-        {/* Left Image Section */}
-        <div className="relative lg:basis-1/3">
-          <Image
-            src="/2nd-Img.webp" // Replace with the correct path of your image
-            alt="Financial analysis mockup"
-            width={400}
-            height={500}
-            className="object-contain mt-[-160px]"
-          />
-        </div>
+    <section className="bg-[url(/home/Homepage-08.webp)] bg-cover bg-center py-16 px-8">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10">Why Choose Us?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`relative p-6 rounded-2xl bg-[#101b58] border-opacity-15 hover:bg-gradient-to-r from-secondary via-[#090a62] to-primary bg-no-repeat transition-all duration-300 cursor-pointer group h-64 overflow-hidden border border-gray-50`}
+            >
+              {/* Icon and Title Container */}
+              <div
+                className="flex flex-col items-start justify-end absolute bottom-0 left-0 right-0 p-6 transition-all duration-500 group-hover:translate-y-[-75%]"
+              >
+                <div className="w-20 h-20">
+                  <Image
+                    src={service.icon}
+                    width={80}
+                    height={80}
+                    alt={service.title}
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+              </div>
 
-        {/* Right Content Section */}
-        <div className="lg:basis-2/3 text-left md:pt-24 pb-16 md:pb-0">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">Why Choose Us?</h2>
-          <ul className="space-y-6">
-            <li className="flex items-start">
-              <FaCheckCircle size={36} className="text-green-400 mr-3 mt-1" />
-              <div>
-                <strong>Professional Expertise:</strong> Our team consists of industry veterans with years of experience in the fintech sector, providing you with insights and strategies that work.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle size={36} className="text-green-400 mr-3 mt-1" />
-              <div>
-                <strong>ROI-Driven Approach:</strong> We focus on delivering measurable results that enhance profitability and drive growth. Our success is measured by your success.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle size={32} className="text-green-400 mr-3 mt-1" />
-              <div>
-                <strong>Scalability & Profitability:</strong> Our solutions are designed to scale with your business, ensuring long-term profitability and sustainability.
-              </div>
-            </li>
-          </ul>
+              {/* Description - Initially hidden and shown on hover */}
+              <p
+                className="absolute bottom-0 left-0 right-0 p-6 text-sm text-gray-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-[-20%] transition-all duration-500"
+              >
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default WhyChooseUs;
+export default WhyChooseUsSection;

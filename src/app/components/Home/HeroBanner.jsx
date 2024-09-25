@@ -1,29 +1,44 @@
-import Image from 'next/image';
-import GradientButton from '../common/GradientButton'
+import Link from "next/link";
+import Image from "next/image";
 
 const HeroBanner = () => {
   return (
-    <section className="bg-white">
-      <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between border-b border-gray-100 py-10 md:py-14">
-        
-        {/* Left Text Section */}
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-3xl md:text-5xl xl:text-[55px] font-bold text-[#080a62] leading-tight mb-6 px-4 md:px-0">
-            Expert-Led Strategies for Maximum ROI & Scalable Growth
+    <section className="relative bg-[url(/home/banner.webp)] bg-cover bg-center bg-no-repeat text-white py-16 lg:py-32 3xl:py-36">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
+        {/* Left Section */}
+        <div className="lg:w-2/3 w-full text-center lg:text-left pt-20">
+          <h3 className="text-3xl md:text-6xl font-light leading-tight pb-2">
+            One-Stop Turnkey
+          </h3>
+          <h1 className="text-3xl md:text-[55px] xl:text-[65px]  font-light md:leading-[60px] xl:leading-[75px] pb-5">
+            <span className="font-black">Expert-Led Consulting Solutions </span>
+            Exclusively for
           </h1>
-          <GradientButton href="/contact" text="Get Started Today" />
-        </div>
-
-        {/* Right Image Section */}
-        <div className="relative lg:mt-0 lg:w-1/2 w-full flex justify-center">
-          <div className="relative w-full h-80 sm:h-96 md:h-[500px]">
+          <div className="relative w-full h-12 md:w-[750px] md:h-16 ">
             <Image
-              src="/banner.webp" // Replace with the correct path of your image
-              alt="Dashboard showing ROI and scalable growth"
+              src="/home/logos1.webp"
+              alt="MetaTrader 4"
               fill
-              className="object-contain"
+              className=" =object-contain"
             />
           </div>
+          <div className="">
+            <h2 className="text-3xl md:text-[65px] font-light leading-[75px] pb-5">
+              <span className="font-black">Broker! </span>
+            </h2>
+          </div>
+          <div className="mt-8 inline-block bg-white hover:bg-secondary text-[#0a0747] font-semibold py-4 px-8 rounded-full text-lg hover:border-white hover:text-white transition w-56 text-center">
+            <Link href="#" passHref>
+       
+                Talk to Us!
+        
+            </Link>
+          </div>
+        </div>
+
+        {/* Right Section (Candlestick Chart) */}
+        <div className="hidden lg:block lg:w-1/3">
+          
         </div>
       </div>
     </section>
