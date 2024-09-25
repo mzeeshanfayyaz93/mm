@@ -14,7 +14,7 @@ const MarketingConsultancy = () => {
           </h3>
           <h1 className="text-3xl md:text-[55px] xl:text-[85px] md:leading-[60px] xl:leading-[75px] pb-5 font-black text-secondary">
             <span className="text-white">EXPERT </span> <br></br>
-            MARKETING STRATEGIES
+            MARKETING STRATEGIES 
           </h1>
           
           <div className="mt-8 inline-block bg-white hover:bg-secondary text-[#0a0747] font-semibold py-4 px-8 rounded-full text-lg hover:border-white hover:text-white transition w-56 text-center">
