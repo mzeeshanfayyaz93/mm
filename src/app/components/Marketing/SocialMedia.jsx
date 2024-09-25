@@ -15,7 +15,7 @@ const socialMedia = [
 const SocialMediaSection = () => {
   return (
     <section className="max-w-[1135px] mx-auto flex justify-center items-center bg-gradient-to-r from-[#e4e4ec] to-[#f9e8eb]">
-      <div className="flex flex-row flex-wrap space-x-10 justify-between">
+      <div className="flex flex-row flex-wrap space-x-9 justify-between">
         {/* Loop through social media array */}
         {socialMedia.map((social, index) => {
           const IconComponent = social.icon; // Dynamically use the correct icon
