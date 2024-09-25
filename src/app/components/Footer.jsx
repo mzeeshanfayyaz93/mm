@@ -6,13 +6,14 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 're
 const Footer = () => {
   const logos = [
  
+    { src: '/logos/CL-02.svg', alt: 'Centroid' },
     { src: '/logos/CL-03.svg', alt: 'Primex' },
-
+    { src: '/logos/CL-04.svg', alt: 'Dealio' },
     { src: '/logos/CL-05.svg', alt: 'OneZero' },
-    { src: '/logos/CL-06.svg', alt: 'FXCubic' },
-    { src: '/logos/CL-07.svg', alt: 'Tapas' },
+ 
     { src: '/logos/CL-08.svg', alt: 'Gold-i' },
     { src: '/logos/CL-09.svg', alt: 'Panda Trading' },
+    
     { src: '/logos/logos-25.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-26.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-27.svg', alt: 'Panda Trading' },
@@ -55,7 +56,7 @@ const Footer = () => {
           <h2 className="text-2xl md:text-5xl font-bold">Hands On Experience!</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 mt-6">
             {logos.map((logo, index) => (
-              <img key={index} src={logo.src} alt={logo.alt} className="h-28 w-auto mx-auto" />
+              <img key={index} src={logo.src} alt={logo.alt} className="h-28 w-auto mx-auto p-5" />
             ))}
           </div>
         </div>

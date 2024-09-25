@@ -8,27 +8,27 @@ const services = [
   },
   {
     title: 'Proven ROI-Driven Strategies',
-    description: 'We design strategies that ensure measurable growth and profitability for our clients.',
+    description: 'Our approach is focused on measurable outcomes. We craft customized strategies that deliver tangible results, enhancing profitability and scalability for your brokerage. Your success is our benchmark.',
     icon: '/H11.svg',
   },
   {
     title: 'Comprehensive Service Offering',
-    description: 'From consultancy to marketing and technology solutions, we offer a wide range of services.',
+    description: 'From marketing and risk management to technology consultancy, we provide a full suite of services tailored to the unique needs of online trading brokers. This integrated approach allows you to streamline operations and focus on growth.',
     icon: '/H12.svg',
   },
   {
     title: 'Industry-Leading Technology Solutions',
-    description: 'We use cutting-edge technologies to build platforms that are robust and scalable.',
+    description: 'We leverage cutting-edge technology to optimize your trading platforms, enhance user experience, and secure your operations. Our expertise in custom CRM systems and tech innovation keeps your brokerage ahead of the curve.',
     icon: '/H13.svg',
   },
   {
     title: 'Client-Centric Approach',
-    description: 'We ensure that our solutions are tailored to meet the specific needs of each client.',
+    description: 'We take the time to understand your specific business challenges and goals. Our team collaborates closely with you to design solutions that align perfectly with your needs, ensuring a personalized and highly effective strategy.',
     icon: '/H14.svg',
   },
   {
     title: 'Trusted by Industry Leaders',
-    description: 'We have a track record of delivering exceptional results for industry leaders.',
+    description: 'Our track record of success and long-term partnerships with industry-leading brokers speaks for itself. We are a trusted consultancy, known for delivering top-notch services that drive growth, compliance, and competitive advantage.k',
     icon: '/H15.svg',
   },
 ];
@@ -42,7 +42,7 @@ const WhyChooseUsSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`relative p-6 rounded-2xl bg-[#101b58] border-opacity-15 hover:bg-gradient-to-r from-secondary via-[#090a62] to-primary bg-no-repeat transition-all duration-300 cursor-pointer group h-64 overflow-hidden border border-gray-50`}
+              className={`relative p-6 rounded-2xl bg-gradient-to-r from-[#0f0936] via-[#0c0a4c] to-[#090b65] border-opacity-15 hover:bg-gradient-to-r hover:from-secondary hover:via-[#090a62] hover:to-primary bg-no-repeat transition-all duration-300 cursor-pointer group h-64 overflow-hidden border border-gray-50`}
             >
               {/* Icon and Title Container */}
               <div

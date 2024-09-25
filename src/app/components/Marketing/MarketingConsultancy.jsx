@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const MarketingConsultancy = () => {
   return (
-    <section className="relative bg-[url(/home/banner.webp)] bg-cover bg-center bg-no-repeat text-white py-16 lg:py-32 3xl:py-36">
+    <section className="relative bg-[url(/marketing/m-banner.webp)] bg-cover bg-center bg-no-repeat text-white py-16 lg:py-32 3xl:py-36">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
         {/* Left Section */}
         <div className="lg:w-2/3 w-full text-center lg:text-left pt-20">
