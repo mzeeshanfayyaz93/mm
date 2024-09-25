@@ -21,7 +21,7 @@ const services = [
     icon: '/H06.svg',
     gradientClass: 'bg-gradient-to-r from-[#080a62] to-[#dc3d52]', // Gradient color
   },
-];
+]; 
 
 const ServicesSection = () => {
   return (
