@@ -6,19 +6,19 @@ const services = [
   {
     title: 'Marketing Consultancy',
     description: 'Boost your brokerage’s visibility and client acquisition with our data-driven marketing strategies. From brand positioning to targeted campaigns around the world, we tailor our services to meet your unique needs.',
-    icon: '/home/icons/Homepage-04.svg',
+    icon: '/home/icons/H04.svg',
     gradientClass: 'bg-gradient-to-r from-[#080a62] to-[#dc3d52]', // Gradient color
   },
   {
     title: 'Risk Management',
     description: 'Mitigate risks and protect your assets with our comprehensive risk management solutions. We identify vulnerabilities and provide proactive strategies to safeguard your brokerage against market volatility & abusive clients.',
-    icon: '/home/icons/Homepage-05.svg',
+    icon: '/home/icons/H05.svg',
     gradientClass: 'bg-gradient-to-r from-[#080a62] to-[#dc3d52]', // Gradient color
   },
   {
     title: 'Technology Consultant',
     description: 'Enhance your trading platform with cutting-edge technology. From branded trading platform to high tech multi layer CRM, our tech experts ensure your systems are robust, secure, and primed for growth.',
-    icon: '/home/icons/Homepage-06.svg',
+    icon: '/home/icons/H06.svg',
     gradientClass: 'bg-gradient-to-r from-[#080a62] to-[#dc3d52]', // Gradient color
   },
 ];

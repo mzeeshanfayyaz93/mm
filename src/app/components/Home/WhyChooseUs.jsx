@@ -4,32 +4,32 @@ const services = [
   {
     title: 'Fintech Experts',
     description: 'We specialize exclusively in fintech, offering in-depth knowledge and targeted solutions designed for online trading brokers. Our deep understanding of the industry ensures that we provide consultancy services that are relevant, innovative, and impactful.',
-    icon: '/home/icons/Homepage-04.svg',  // Assuming you have an icon
+    icon: '/home/icons/H10.svg',  // Assuming you have an icon
   },
   {
     title: 'Proven ROI-Driven Strategies',
     description: 'We design strategies that ensure measurable growth and profitability for our clients.',
-    icon: '/home/icons/Homepage-11.svg',
+    icon: '/home/icons/H11.svg',
   },
   {
     title: 'Comprehensive Service Offering',
     description: 'From consultancy to marketing and technology solutions, we offer a wide range of services.',
-    icon: '/home/icons/Homepage-12.svg',
+    icon: '/home/icons/H12.svg',
   },
   {
     title: 'Industry-Leading Technology Solutions',
     description: 'We use cutting-edge technologies to build platforms that are robust and scalable.',
-    icon: '/home/icons/Homepage-13.svg',
+    icon: '/home/icons/H13.svg',
   },
   {
     title: 'Client-Centric Approach',
     description: 'We ensure that our solutions are tailored to meet the specific needs of each client.',
-    icon: '/home/icons/Homepage-14.svg',
+    icon: '/home/icons/H14.svg',
   },
   {
     title: 'Trusted by Industry Leaders',
     description: 'We have a track record of delivering exceptional results for industry leaders.',
-    icon: '/home/icons/Homepage-15.svg',
+    icon: '/home/icons/H15.svg',
   },
 ];
 
