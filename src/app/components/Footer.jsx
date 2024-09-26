@@ -1,19 +1,27 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
-  const logos = [
- 
+  const pathname = usePathname(); // Get current path
+
+  // Logos shown on all pages
+  const commonLogos = [
     { src: '/logos/CL-02.svg', alt: 'Centroid' },
     { src: '/logos/CL-03.svg', alt: 'Primex' },
     { src: '/logos/CL-04.svg', alt: 'Dealio' },
     { src: '/logos/CL-05.svg', alt: 'OneZero' },
- 
+    { src: '/logos/CL-06.svg', alt: 'FXCubic' },
+    { src: '/logos/CL-07.svg', alt: 'Tapas' },
     { src: '/logos/CL-08.svg', alt: 'Gold-i' },
     { src: '/logos/CL-09.svg', alt: 'Panda Trading' },
-    
+  ];
+
+  // Extra logos shown only on the specific page (e.g., marketing consultancy)
+  const extraLogos = [
     { src: '/logos/logos-25.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-26.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-27.svg', alt: 'Panda Trading' },
@@ -27,6 +35,10 @@ const Footer = () => {
     { src: '/logos/logos-35.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-36.svg', alt: 'Panda Trading' },
   ];
+
+  // Combine logos based on the page
+  const isMarketingPage = pathname === '/marketing-consultancy';
+  const logosToShow = isMarketingPage ? [...extraLogos] : commonLogos;
 
   const companyLinks = [
     { name: 'About Us', href: '#' },
@@ -54,8 +66,8 @@ const Footer = () => {
         {/* Partners Section */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-5xl font-bold">Hands On Experience!</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 mt-6">
-            {logos.map((logo, index) => (
+          <div className={`grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-${isMarketingPage ? '6' : '4'} gap-6 mt-6`}>
+            {logosToShow.map((logo, index) => (
               <img key={index} src={logo.src} alt={logo.alt} className="h-28 w-auto mx-auto p-5" />
             ))}
           </div>

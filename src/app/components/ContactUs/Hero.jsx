@@ -10,7 +10,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 const ContactUsHeroSection = () => {
     return (
         <div>
-            <section className="bg-gradient-to-r from-[#080a62] from-30%  to-secondary to-90% pt-16 md:px-4 text-white relative">
+            <section className="bg-gradient-to-r from-[#080a62] from-30%  to-secondary to-90% pt-28 3xl:pt-36 xl:pt-32 md:px-4 text-white relative">
                 <div className="max-w-6xl mx-auto text-center lg:text-left">
                     <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-4 text-center md:leading-normal">
                         Contact Us

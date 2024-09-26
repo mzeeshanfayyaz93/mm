@@ -3,7 +3,7 @@ import GradientButton from '../common/GradientButton'
 
 const RiskHeroSection = () => {
     return (
-        <section className=" text-white md:py-20 py-8 px-4">
+        <section className=" text-white md:py-20 py-8 px-4  mt-14 md:mt-20 3xl:mt-24">
             <div className="max-w-6xl flex flex-col-reverse md:flex-row mx-auto gap-2">
                 <div className='md:w-3/5 w-full text-[#080a62]'>
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">

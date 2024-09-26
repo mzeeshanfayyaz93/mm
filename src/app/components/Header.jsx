@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Use usePathname to get current path
 
 // Navigation Links
 const navigation = [
@@ -17,6 +18,7 @@ const navigation = [
 ];
 
 const Header = () => {
+  const pathname = usePathname(); // Get the current pathname
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -34,10 +36,17 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Determine if the current page is the home page or marketing consultancy page
+  const isTransparentPage = pathname === '/' || pathname === '/marketing-consultancy' || pathname === '/contact';
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 py-2 transition-all duration-300 ${
-        isScrolled ? 'bg-gradient-to-r from-[#0a0747] to-[#aa165e]' : 'bg-transparent'
+        isTransparentPage
+          ? isScrolled
+            ? 'bg-gradient-to-r from-[#0a0747] to-[#aa165e]' // Apply gradient when scrolled
+            : 'bg-transparent' // Apply transparent background when not scrolled
+          : 'bg-gradient-to-b from-[#0a0747] to-[#aa165e]' // Default gradient background for other pages
       }`}
     >
       <div className="container flex flex-row items-center justify-between">

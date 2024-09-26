@@ -3,7 +3,7 @@ import GradientButton from '../common/GradientButton'
 
 const TechnologyOptimization = () => {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-16 px-4  mt-14 md:mt-20 3xl:mt-24">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
         {/* Content Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
