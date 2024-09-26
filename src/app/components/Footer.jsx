@@ -32,7 +32,7 @@ const Footer = () => {
     { src: '/logos/logos-32.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-33.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-34.svg', alt: 'Panda Trading' },
-    { src: '/logos/logos-35.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-35.svg', alt: 'Panda Trading' }, 
     { src: '/logos/logos-36.svg', alt: 'Panda Trading' },
   ];
 
@@ -65,10 +65,15 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Partners Section */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-5xl font-bold">Hands On Experience!</h2>
-          <div className={`grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-${isMarketingPage ? '6' : '4'} gap-6 mt-6`}>
+          <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-bold capitalize pb-8">Tried, tested, trusted expertise!</h2>
+          <div
+            className={`flex flex-row flex-wrap justify-center gap-6`}
+          >
             {logosToShow.map((logo, index) => (
-              <img key={index} src={logo.src} alt={logo.alt} className="h-28 w-auto mx-auto p-5" />
+              <div className='relative w-32 h-14'>
+                <Image key={index} src={logo.src} alt={logo.alt} fill className='object-contain' />
+              </div>
+
             ))}
           </div>
         </div>
@@ -88,7 +93,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="hover:text-secondary">{link.name}</Link>
+                  <Link href={link.href} className="hover:text-secondary">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -100,28 +107,43 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="hover:text-secondary">{link.name}</Link>
+                  <Link href={link.href} className="hover:text-secondary">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Location */}
-          <div>
-            <h3 className="font-bold mb-2">Location</h3>
-            <p>Meydan Grandstand, 6th Floor,<br />Meydan Road, Nad Al Sheba,<br />Dubai, U.A.E</p>
+          <div className="md:col-span-full flex justify-center">
+            <div>
+              <h3 className="font-bold mb-2">Location</h3>
+              <p className="text-center">
+                Meydan Grandstand, 6th Floor,
+                <br />
+                Meydan Road, Nad Al Sheba,
+                <br />
+                Dubai, U.A.E
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Social Media and Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-10">
-          <p className="text-xs text-center md:text-left md:text-sm pb-3 md:pb-0">© 2024 MARKET MAVENS LTD all rights reserved.</p>
+          <p className="text-xs text-center md:text-left md:text-sm pb-3 md:pb-0">
+            © 2024 MARKET MAVENS LTD all rights reserved.
+          </p>
           <div className="flex space-x-2">
             {socialIcons.map((icon, index) => {
               const IconComponent = icon.component;
               return (
                 <a key={index} href={icon.href}>
-                  <IconComponent size={28} className=" bg-white rounded-full text-primary hover:bg-secondary hover:text-white p-2" />
+                  <IconComponent
+                    size={28}
+                    className=" bg-white rounded-full text-primary hover:bg-secondary hover:text-white p-2"
+                  />
                 </a>
               );
             })}

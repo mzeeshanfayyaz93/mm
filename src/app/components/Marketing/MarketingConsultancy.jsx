@@ -8,11 +8,11 @@ const MarketingConsultancy = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
         {/* Left Section */}
         <div className="lg:w-2/3 w-full text-center lg:text-left pt-20">
-          <h3 className="text-3xl md:text-6xl font-light leading-tight pb-2">
+          <h3 className="text-2xl md:text-[38px] xl:text-[50px] 3xl:text-6xl font-light leading-[55px]">
           <b className='font-bold'>Elevate </b>Your <br></br>
           Brokerage’s Brand with
           </h3>
-          <h1 className="text-3xl md:text-[55px] xl:text-[85px] md:leading-[60px] xl:leading-[75px] pb-5 font-black text-secondary">
+          <h1 className="text-2xl md:text-[40px] xl:text-[55px] 3xl:text-6xl md:leading-[55px] xl:leading-[65px] pb-5 font-black text-secondary md:w-96">
             <span className="text-white">EXPERT </span> <br></br>
             MARKETING STRATEGIES 
           </h1>

@@ -20,8 +20,14 @@ const FintechSection = () => {
 
         {/* Left Text Section (shows second on mobile) */}
         <div className="lg:w-1/2 text-center lg:text-left lg:order-1">
-          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold c mb-4">About Us</h1>
-          <p className="text-lg font-semibold text-[#080a62] mb-4">
+          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold c mb-10">About Us</h1>
+          
+          <GradientButton href="/contact" text="Get Started Today" />
+        </div>
+      
+      </div>
+      <div className='text-center max-w-5xl mx-auto'>
+        <p className="text-xl font-semibold text-[#080a62] mb-4">
             Market Mavens was founded with a singular goal:
           </p>
           <p className="text-base md:text-lg  mb-6">
@@ -30,9 +36,7 @@ const FintechSection = () => {
           <p className="text-base md:text-lg mb-8">
             Our team of seasoned professionals brings decades of combined experience in marketing, risk management, and technology consultancy, all aimed at driving measurable results and sustainable growth for our clients.
           </p>
-          <GradientButton href="/contact" text="Get Started Today" />
         </div>
-      </div>
     </section>
   );
 };
