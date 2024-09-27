@@ -3,7 +3,7 @@ import GradientButton from '../common/GradientButton'
 
 const FintechSection = () => {
   return (
-    <section className="bg-white py-16 px-4 mt-14 md:mt-16 3xl:mt-20">
+    <section className="bg-white pt-16 pb-10 px-4 mt-14 md:mt-16 3xl:mt-20">
       <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
         
         {/* Right Image Section (shows first on mobile) */}
