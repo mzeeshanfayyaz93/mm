@@ -41,15 +41,15 @@ const Footer = () => {
   const logosToShow = isMarketingPage ? [...extraLogos] : commonLogos;
 
   const companyLinks = [
-    { name: 'About Us', href: '#' },
-    { name: 'Contact Us', href: '#' },
-    { name: 'Blogs', href: '#' },
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy-cookie-policy' },
   ];
 
   const serviceLinks = [
-    { name: 'Marketing Consultancy', href: '#' },
-    { name: 'Risk Management', href: '#' },
-    { name: 'Technology Consultancy', href: '#' },
+    { name: 'Marketing Consultancy', href: '/marketing-consultancy' },
+    { name: 'Risk Management', href: '/risk-management' },
+    { name: 'Technology Consultancy', href: '/technology-consultancy' },
   ];
 
   const socialIcons = [
@@ -79,7 +79,8 @@ const Footer = () => {
         </div>
 
         {/* Footer Links and Info */}
-        <div className="border-t border-gray-500 pt-8 grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
+               {/* Footer Links and Info */}
+               <div className="border-t border-gray-500 pt-8 grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
           {/* Logo and Tagline */}
           <div className="relative w-48 h-20">
             <Link href="/">
@@ -93,9 +94,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="hover:text-secondary">
-                    {link.name}
-                  </Link>
+                  <Link href={link.href} className="hover:text-secondary">{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -107,26 +106,16 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="hover:text-secondary">
-                    {link.name}
-                  </Link>
+                  <Link href={link.href} className="hover:text-secondary">{link.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Location */}
-          <div className="md:col-span-full flex justify-center">
-            <div>
-              <h3 className="font-bold mb-2">Location</h3>
-              <p className="text-center">
-                Meydan Grandstand, 6th Floor,
-                <br />
-                Meydan Road, Nad Al Sheba,
-                <br />
-                Dubai, U.A.E
-              </p>
-            </div>
+          <div>
+            <h3 className="font-bold mb-2">Location</h3>
+            <p>Meydan Grandstand, 6th Floor,<br />Meydan Road, Nad Al Sheba,<br />Dubai, U.A.E</p>
           </div>
         </div>
 
