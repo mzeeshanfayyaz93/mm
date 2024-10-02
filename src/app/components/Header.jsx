@@ -11,9 +11,9 @@ import { usePathname } from 'next/navigation'; // Use usePathname to get current
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: 'about-us' },
-  { name: 'Marketing Consultancy', href: 'marketing-consultancy' },
-  { name: 'Risk Management', href: 'risk-management' },
-  { name: 'Technology Consultancy', href: 'technology-consultancy' },
+  { name: 'Marketing', href: 'marketing-consultancy' },
+  { name: 'Risk', href: 'risk-management' },
+  { name: 'Technology', href: 'technology-consultancy' },
   { name: 'Blogs', href: 'blogs' },
 ];
 
@@ -37,17 +37,16 @@ const Header = () => {
   }, []);
 
   // Determine if the current page is the home page or marketing consultancy page
-  const isTransparentPage = pathname === '/' || pathname === '/marketing-consultancy' || pathname === '/contact' || pathname === '/privacy-cookie-policy' || pathname === '/growth-expand' ;
+  const isTransparentPage = pathname === '/' || pathname === '/marketing-consultancy' || pathname === '/contact' || pathname === '/privacy-cookie-policy' || pathname === '/growth-expand';
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 py-2 transition-all duration-300 ${
-        isTransparentPage
+      className={`fixed inset-x-0 top-0 z-50 py-2 transition-all duration-300 ${isTransparentPage
           ? isScrolled
             ? 'bg-gradient-to-r from-[#0a0747] to-[#aa165e]' // Apply gradient when scrolled
             : 'bg-transparent' // Apply transparent background when not scrolled
           : 'bg-gradient-to-b from-[#0a0747] to-[#aa165e]' // Default gradient background for other pages
-      }`}
+        }`}
     >
       <div className="container flex flex-row items-center justify-between">
         {/* Logo */}
@@ -77,11 +76,12 @@ const Header = () => {
             </Link>
           ))}
           {/* Log in Button for Desktop */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="/contact" className="bg-primary rounded-full py-3 px-7 text-white shadow-2xl hover:bg-white hover:text-primary">
-              Contact Us
-            </Link>
-          </div>
+
+        </div>
+        <div className="hidden lg:block lg:justify-end">
+          <Link href="/contact" className="bg-primary rounded-full py-3 px-7 text-white shadow-2xl hover:bg-white hover:text-primary">
+            Contact Us
+          </Link>
         </div>
 
         {/* Mobile Menu Dialog */}

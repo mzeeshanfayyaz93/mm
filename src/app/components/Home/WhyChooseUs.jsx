@@ -4,7 +4,7 @@ const services = [
   {
     title: 'Fintech Experts',
     description: 'We specialize exclusively in fintech, offering in-depth knowledge and targeted solutions designed for online trading brokers. Our deep understanding of the industry ensures that we provide consultancy services that are relevant, innovative, and impactful.',
-    icon: '/H10.svg',  // Assuming you have an icon
+    icon: '/H10.svg',
   },
   {
     title: 'Proven ROI-Driven Strategies',
@@ -42,27 +42,27 @@ const WhyChooseUsSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`relative p-6 rounded-2xl bg-gradient-to-r from-[#0f0936] via-[#0c0a4c] to-[#090b65] border-opacity-15 hover:bg-gradient-to-r hover:from-secondary hover:via-[#090a62] hover:to-primary bg-no-repeat transition-all duration-300 cursor-pointer group h-64 overflow-hidden border border-gray-50`}
+              className={`relative p-6 rounded-2xl bg-gradient-to-r from-[#0f0936] via-[#0c0a4c] to-[#090b65] border-opacity-15 hover:bg-gradient-to-r hover:from-secondary hover:via-[#090a62] hover:to-primary bg-no-repeat transition-all duration-300 cursor-pointer group h-auto overflow-hidden border border-gray-50`}
             >
               {/* Icon and Title Container */}
               <div
-                className="flex flex-col items-start justify-end absolute bottom-0 left-0 right-0 p-6 transition-all duration-500 group-hover:translate-y-[-75%]"
+                className="flex flex-col items-start justify-start h-auto mb-4"
               >
-                <div className="w-20 h-20">
+                <div className="w-16 h-16 mb-4">
                   <Image
                     src={service.icon}
-                    width={80}
-                    height={80}
+                    width={64}
+                    height={64}
                     alt={service.title}
                     className="object-contain"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+                <h3 className="text-lg font-semibold text-white sm:text-base">{service.title}</h3>
               </div>
 
-              {/* Description - Initially hidden and shown on hover */}
+              {/* Description - Visible on hover, but no longer using translate */}
               <p
-                className="absolute bottom-0 left-0 right-0 p-6 text-sm text-gray-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-[-20%] transition-all duration-500"
+                className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out sm:text-xs"
               >
                 {service.description}
               </p>

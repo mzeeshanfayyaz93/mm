@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PrivacyPolicySection = () => {
   return (
-    <section className="relative bg-gradient-to-r from-[#0a0747] via-[#0c0d4c] to-[#340e38] py-12 lg:py-16 2xl:py-28">
+    <section className="relative px-6 bg-gradient-to-r from-[#0a0747] via-[#0c0d4c] to-[#340e38] py-12 lg:py-16 2xl:py-28">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center pt-16">
         
         {/* Text Content */}

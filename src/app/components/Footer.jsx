@@ -44,12 +44,14 @@ const Footer = () => {
     { name: 'About Us', href: '/about-us' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy-cookie-policy' },
+    { name: 'Company Policy', href: '/company-policy' },
+
   ];
 
   const serviceLinks = [
-    { name: 'Marketing Consultancy', href: '/marketing-consultancy' },
-    { name: 'Risk Management', href: '/risk-management' },
-    { name: 'Technology Consultancy', href: '/technology-consultancy' },
+    { name: 'Marketing', href: '/marketing-consultancy' },
+    { name: 'Risk', href: '/risk-management' },
+    { name: 'Technology', href: '/technology-consultancy' },
   ];
 
   const socialIcons = [
@@ -90,7 +92,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h3 className="font-medium mb-2">Company</h3>
+            <h3 className="font-medium mb-2 text-secondary">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -102,7 +104,7 @@ const Footer = () => {
 
           {/* Services Links */}
           <div>
-            <h3 className="font-medium mb-2">Services</h3>
+            <h3 className="font-medium mb-2 text-secondary">Services</h3>
             <ul className="space-y-2">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
@@ -114,15 +116,16 @@ const Footer = () => {
 
           {/* Location */}
           <div>
-            <h3 className="font-bold mb-2">Location</h3>
+            <h3 className="font-bold mb-2 text-secondary">Location</h3>
             <p>Meydan Grandstand, 6th Floor,<br />Meydan Road, Nad Al Sheba,<br />Dubai, U.A.E</p>
           </div>
         </div>
 
         {/* Social Media and Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-10">
+        <div className="flex flex-col md:flex-row gap-x-2 items-center justify-between pt-10">
           <p className="text-xs text-center md:text-left md:text-sm pb-3 md:pb-0">
-            © 2024 MARKET MAVENS LTD all rights reserved.
+          Market Mavens is a brand owned and operated by The Isic Group LLC FZ. 
+          Copyright @ 2024 The Isic Group LLC FZ
           </p>
           <div className="flex space-x-2">
             {socialIcons.map((icon, index) => {
