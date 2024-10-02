@@ -37,7 +37,7 @@ const Header = () => {
   }, []);
 
   // Determine if the current page is the home page or marketing consultancy page
-  const isTransparentPage = pathname === '/' || pathname === '/marketing-consultancy' || pathname === '/contact' || pathname === '/privacy-cookie-policy';
+  const isTransparentPage = pathname === '/' || pathname === '/marketing-consultancy' || pathname === '/contact' || pathname === '/privacy-cookie-policy' || pathname === '/growth-expand' ;
 
   return (
     <header

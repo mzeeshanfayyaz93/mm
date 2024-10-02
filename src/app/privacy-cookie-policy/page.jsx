@@ -8,7 +8,7 @@ import PrivacySectionData from '../components/Privacy/PrivacySectionData'
 import FintechSection from '../components/About/FintechSection';
 
 export const metadata = {
-    title: 'Privacy & Cookie Policy - ',
+    title: 'Privacy & Cookie Policy - Market Mavens',
     description:
       'At Market Mavens, we are committed to safeguarding your privacy. This Privacy & Cookie Policy explains how we collect, use, and protect your personal information, as well as how we use cookies and similar technologies on our website.',
   };
