@@ -6,7 +6,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const DynamicSection = () => {
   return (
-    <section className="bg-white pb-16">
+    <section className="bg-white pb-16 px-6">
     <div className="max-w-6xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">Cookies and Similar Technologies</h2>
       <p className=" mb-8 text-lg md:text-xl">

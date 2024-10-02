@@ -31,7 +31,7 @@ const CardTwo = ({ deliverables }) => {
 
 const KeyServicesSection = () => {
     return (
-        <section className="bg-gradient-to-r max-w-6xl mx-auto from-[#080a62]  to-[#dc3d52] text-white md:py-16 py-8 px-8">
+        <section className="bg-gradient-to-r from-[#080a62]  to-[#dc3d52] text-white md:py-16 py-8 px-8">
             <div>
                 <h2 className="text-3xl font-bold text-center mb-12">Key Services</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
