@@ -1,10 +1,15 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
-  const logos = [
+  const pathname = usePathname(); // Get current path
+
+  // Logos shown on all pages
+  const commonLogos = [
     { src: '/logos/CL-02.svg', alt: 'Centroid' },
     { src: '/logos/CL-03.svg', alt: 'Primex' },
     { src: '/logos/CL-04.svg', alt: 'Dealio' },
@@ -15,16 +20,36 @@ const Footer = () => {
     { src: '/logos/CL-09.svg', alt: 'Panda Trading' },
   ];
 
+  // Extra logos shown only on the specific page (e.g., marketing consultancy)
+  const extraLogos = [
+    { src: '/logos/logos-25.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-26.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-27.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-28.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-29.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-30.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-31.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-32.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-33.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-34.svg', alt: 'Panda Trading' },
+    { src: '/logos/logos-35.svg', alt: 'Panda Trading' }, 
+    { src: '/logos/logos-36.svg', alt: 'Panda Trading' },
+  ];
+
+  // Combine logos based on the page
+  const isMarketingPage = pathname === '/marketing-consultancy';
+  const logosToShow = isMarketingPage ? [...extraLogos] : commonLogos;
+
   const companyLinks = [
-    { name: 'About Us', href: '#' },
-    { name: 'Contact Us', href: '#' },
-    { name: 'Blogs', href: '#' },
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy-cookie-policy' },
   ];
 
   const serviceLinks = [
-    { name: 'Marketing Consultancy', href: '#' },
-    { name: 'Risk Management', href: '#' },
-    { name: 'Technology Consultancy', href: '#' },
+    { name: 'Marketing Consultancy', href: '/marketing-consultancy' },
+    { name: 'Risk Management', href: '/risk-management' },
+    { name: 'Technology Consultancy', href: '/technology-consultancy' },
   ];
 
   const socialIcons = [
@@ -40,16 +65,22 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Partners Section */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-5xl font-bold">Hands On Experience!</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-            {logos.map((logo, index) => (
-              <img key={index} src={logo.src} alt={logo.alt} className="h-28 w-auto mx-auto" />
+          <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-bold capitalize pb-8">Tried, tested, trusted expertise!</h2>
+          <div
+            className={`flex flex-row flex-wrap justify-center gap-6`}
+          >
+            {logosToShow.map((logo, index) => (
+              <div className='relative w-32 h-14'>
+                <Image key={index} src={logo.src} alt={logo.alt} fill className='object-contain' />
+              </div>
+
             ))}
           </div>
         </div>
 
         {/* Footer Links and Info */}
-        <div className="border-t border-gray-500 pt-8 grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
+               {/* Footer Links and Info */}
+               <div className="border-t border-gray-500 pt-8 grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
           {/* Logo and Tagline */}
           <div className="relative w-48 h-20">
             <Link href="/">
@@ -90,13 +121,18 @@ const Footer = () => {
 
         {/* Social Media and Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-10">
-          <p className="text-xs text-center md:text-left md:text-sm pb-3 md:pb-0">© 2024 MARKET MAVENS LTD all rights reserved.</p>
+          <p className="text-xs text-center md:text-left md:text-sm pb-3 md:pb-0">
+            © 2024 MARKET MAVENS LTD all rights reserved.
+          </p>
           <div className="flex space-x-2">
             {socialIcons.map((icon, index) => {
               const IconComponent = icon.component;
               return (
                 <a key={index} href={icon.href}>
-                  <IconComponent size={28} className=" bg-white rounded-full text-primary hover:bg-secondary hover:text-white p-2" />
+                  <IconComponent
+                    size={28}
+                    className=" bg-white rounded-full text-primary hover:bg-secondary hover:text-white p-2"
+                  />
                 </a>
               );
             })}

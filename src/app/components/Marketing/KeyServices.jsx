@@ -58,8 +58,8 @@ const services = [
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {services.map((service, index) => (
               <div key={index} className="p-8 bg-gray-50 shadow-md rounded-lg">
-                <h3 className="text-lg md:text-2xl font-bold text-[#080a62] mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <h3 className="text-lg md:text-xl font-bold text-[#080a62] mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6 md:min-h-[190px] text-base">{service.description}</p>
                 <div className="bg-white p-4 rounded-lg shadow-inner bg-[url(/marketing/bg-4.webp)] bg-cover bg-center">
                   <h4 className="font-semibold text-lg text-[#080a62] mb-2">Deliverables:</h4>
                   <ul className="list-none space-y-2">

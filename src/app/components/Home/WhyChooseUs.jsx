@@ -1,48 +1,77 @@
 import Image from 'next/image';
-import { FaCheckCircle } from 'react-icons/fa'; // Checkmark icon
 
-const WhyChooseUs = () => {
+const services = [
+  {
+    title: 'Fintech Experts',
+    description: 'We specialize exclusively in fintech, offering in-depth knowledge and targeted solutions designed for online trading brokers. Our deep understanding of the industry ensures that we provide consultancy services that are relevant, innovative, and impactful.',
+    icon: '/H10.svg',  // Assuming you have an icon
+  },
+  {
+    title: 'Proven ROI-Driven Strategies',
+    description: 'Our approach is focused on measurable outcomes. We craft customized strategies that deliver tangible results, enhancing profitability and scalability for your brokerage. Your success is our benchmark.',
+    icon: '/H11.svg',
+  },
+  {
+    title: 'Comprehensive Service Offering',
+    description: 'From marketing and risk management to technology consultancy, we provide a full suite of services tailored to the unique needs of online trading brokers. This integrated approach allows you to streamline operations and focus on growth.',
+    icon: '/H12.svg',
+  },
+  {
+    title: 'Industry-Leading Technology Solutions',
+    description: 'We leverage cutting-edge technology to optimize your trading platforms, enhance user experience, and secure your operations. Our expertise in custom CRM systems and tech innovation keeps your brokerage ahead of the curve.',
+    icon: '/H13.svg',
+  },
+  {
+    title: 'Client-Centric Approach',
+    description: 'We take the time to understand your specific business challenges and goals. Our team collaborates closely with you to design solutions that align perfectly with your needs, ensuring a personalized and highly effective strategy.',
+    icon: '/H14.svg',
+  },
+  {
+    title: 'Trusted by Industry Leaders',
+    description: 'Our track record of success and long-term partnerships with industry-leading brokers speaks for itself. We are a trusted consultancy, known for delivering top-notch services that drive growth, compliance, and competitive advantage.k',
+    icon: '/H15.svg',
+  },
+];
+
+const WhyChooseUsSection = () => {
   return (
-    <section className="bg-[url(/bg-image.svg)] bg-cover bg-center text-white md:h-[450px] mt-16 mb-10 md:mb-40">
-      <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
-        {/* Left Image Section */}
-        <div className="relative lg:basis-1/3">
-          <Image
-            src="/2nd-Img.webp" // Replace with the correct path of your image
-            alt="Financial analysis mockup"
-            width={400}
-            height={500}
-            className="object-contain mt-[-160px]"
-          />
-        </div>
+    <section className="bg-[url(/home/Homepage-08.webp)] bg-cover bg-center py-16 px-8">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10">Why Choose Us?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`relative p-6 rounded-2xl bg-gradient-to-r from-[#0f0936] via-[#0c0a4c] to-[#090b65] border-opacity-15 hover:bg-gradient-to-r hover:from-secondary hover:via-[#090a62] hover:to-primary bg-no-repeat transition-all duration-300 cursor-pointer group h-64 overflow-hidden border border-gray-50`}
+            >
+              {/* Icon and Title Container */}
+              <div
+                className="flex flex-col items-start justify-end absolute bottom-0 left-0 right-0 p-6 transition-all duration-500 group-hover:translate-y-[-75%]"
+              >
+                <div className="w-20 h-20">
+                  <Image
+                    src={service.icon}
+                    width={80}
+                    height={80}
+                    alt={service.title}
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+              </div>
 
-        {/* Right Content Section */}
-        <div className="lg:basis-2/3 text-left md:pt-24 pb-16 md:pb-0">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">Why Choose Us?</h2>
-          <ul className="space-y-6">
-            <li className="flex items-start">
-              <FaCheckCircle size={36} className="text-green-400 mr-3 mt-1" />
-              <div>
-                <strong>Professional Expertise:</strong> Our team consists of industry veterans with years of experience in the fintech sector, providing you with insights and strategies that work.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle size={36} className="text-green-400 mr-3 mt-1" />
-              <div>
-                <strong>ROI-Driven Approach:</strong> We focus on delivering measurable results that enhance profitability and drive growth. Our success is measured by your success.
-              </div>
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle size={32} className="text-green-400 mr-3 mt-1" />
-              <div>
-                <strong>Scalability & Profitability:</strong> Our solutions are designed to scale with your business, ensuring long-term profitability and sustainability.
-              </div>
-            </li>
-          </ul>
+              {/* Description - Initially hidden and shown on hover */}
+              <p
+                className="absolute bottom-0 left-0 right-0 p-6 text-sm text-gray-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-[-20%] transition-all duration-500"
+              >
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default WhyChooseUs;
+export default WhyChooseUsSection;
