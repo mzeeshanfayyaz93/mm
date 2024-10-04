@@ -3,7 +3,7 @@ import Image from 'next/image';
 const RiskWhyChooseUsSection = () => {
     return (
         <section >
-            <div className="max-w-6xl mx-auto md:py-16 py-8 px-8 bg-[#eceef1] flex flex-col lg:flex-row items-center gap-12">
+            <div className="max-w-6xl mx-auto md:py-16 py-8 px-8 flex flex-col lg:flex-row items-center gap-12">
                 <div className="lg:w-1/2">
                     <h2 className="text-4xl font-bold mb-6">Why Choose Market Mavens <span className='text-[#dc3d52]'>Risk Management?</span></h2>
                     <p className="text-lg mb-4">

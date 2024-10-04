@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const FintechExpertiseSection = () => {
   return (
-    <section className="relative bg-gradient-to-r from-[#e4e5eb] to-[#fae9ed] py-16 px-8 md:px-16">
+    <section className="relative pb-16 px-8 md:px-16">
       {/* Image as Overlay */}
-      <div className='absolute inset-0 bg-[url(/home/fin.webp)] bg-contain bg-center bg-no-repeat opacity-30 pointer-events-none' />
+      {/* <div className='absolute inset-0 bg-[url(/home/fin.webp)] bg-contain bg-center bg-no-repeat opacity-30 pointer-events-none' /> */}
 
       <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row z-10">
         {/* Left Text Section */}

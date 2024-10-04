@@ -20,7 +20,7 @@ const FintechSection = () => {
 
         {/* Left Text Section (shows second on mobile) */}
         <div className="lg:w-1/2 text-center lg:text-left lg:order-1">
-          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold c mb-10">Innovating the future of online trading through expert consultancy and unmatched fintech solutions.</h1>
+          <h1 className="text-2xl md:text-3xl xl:text-3xl font-bold c mb-10">Innovating the future of online trading through expert consultancy and unmatched fintech solutions.</h1>
 
           <GradientButton href="/contact" text="Get Started Today" />
         </div>
