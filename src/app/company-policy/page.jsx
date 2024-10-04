@@ -1,14 +1,12 @@
-
-'use client'
 import React from 'react'
 import CompanyPolicySection from '../components/CompanyPolicy/heroSection'
 import { policyData } from './policyData'
 
-// export const metadata = {
-//     title: 'Company Policy - Market Mavens',
-//     description:
-//         'At Market Mavens, we believe in fostering a productive, innovative, and flexible work environment. As a hybrid model company, we support both in-office and remote work to ensure our team operates at its best, while also delivering top-tier services to our clients. This policy outlines our workplace standards, communication guidelines, and expectations to maintain a thriving and professional work environment.'
-// };
+export const metadata = {
+    title: 'Company Policy - Market Mavens',
+    description:
+        'At Market Mavens, we believe in fostering a productive, innovative, and flexible work environment. As a hybrid model company, we support both in-office and remote work to ensure our team operates at its best, while also delivering top-tier services to our clients. This policy outlines our workplace standards, communication guidelines, and expectations to maintain a thriving and professional work environment.'
+};
 
 const CompanyPage = () => {
     return (

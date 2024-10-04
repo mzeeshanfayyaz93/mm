@@ -45,7 +45,7 @@ const Footer = () => {
     { name: 'Contact Us', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy-cookie-policy' },
     { name: 'Company Policy', href: '/company-policy' },
-
+    { name: 'Careers', href: '/career' },
   ];
 
   const serviceLinks = [

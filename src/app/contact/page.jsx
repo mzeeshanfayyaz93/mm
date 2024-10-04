@@ -1,6 +1,5 @@
 import ContactUsHeroSection from '../components/ContactUs/Hero';
 
-
 export const metadata = {
   title: 'Contact Us - Expert Solutions for Trading Excellence',
   description:
