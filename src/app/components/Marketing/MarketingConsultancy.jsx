@@ -12,7 +12,7 @@ const MarketingConsultancy = () => {
           <b className='font-bold'>Elevate </b>Your <br></br>
           Brokerage’s Brand with
           </h3>
-          <h1 className="text-2xl md:text-[40px] xl:text-[40px] 3xl:text-6xl md:leading-[55px] xl:leading-[65px] pb-5 font-black text-secondary md:w-96">
+          <h1 className="text-2xl md:text-[40px] xl:text-[40px] 3xl:text-6xl md:leading-[55px] pb-5 font-black text-secondary md:w-96">
             <span className="text-white">EXPERT </span> <br></br>
             MARKETING STRATEGIES 
           </h1>

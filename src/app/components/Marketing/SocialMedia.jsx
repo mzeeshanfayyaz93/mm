@@ -12,20 +12,24 @@ const socialMedia = [
   { name: 'Medium', icon: FaMedium, link: 'https://www.medium.com' },
 ];
 
-const SocialMediaSection = () => {
+const SocialMediaSection = ({ setActive, active }) => {
   return (
-    <section className="max-w-[1135px] mx-auto flex justify-center items-center bg-gradient-to-r from-[#e4e4ec] to-[#f9e8eb]">
-      <div className="flex flex-row flex-wrap space-x-9 justify-between">
+    <section className="max-w-[1135px] mx-auto flex justify-between items-center bg-gradient-to-r from-[#e4e4ec] to-[#f9e8eb]">
+      <div className="flex flex-row flex-wrap justify-between w-full">
         {/* Loop through social media array */}
         {socialMedia.map((social, index) => {
           const IconComponent = social.icon; // Dynamically use the correct icon
           return (
-            <Link href={social.link} key={index} target="_blank" rel="noopener noreferrer">
+            <div key={index} className=' cursor-pointer'
+              onMouseOver={() => {
+                setActive(index + 1)
+              }}
+            >
               <div className="relative p-4 group transition duration-500">
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#080a62] to-[#dc3d52] opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                <IconComponent className="text-[#080a62] group-hover:text-white text-3xl md:text-8xl z-10 relative transition duration-300 md:px-5" />
+                <div className={`absolute inset-0 w-full h-full ${active == index + 1 ? "bg-gradient-to-r from-[#080a62] to-[#dc3d52]" : ""} group-hover:opacity-100 transition duration-300`}></div>
+                <IconComponent className={` ${active == index + 1 ? "text-white" : "text-[#080a62]"} text-3xl md:text-8xl z-10 relative transition duration-300 md:px-5`} />
               </div>
-            </Link>
+            </div>
           );
         })}
       </div>
