@@ -24,7 +24,8 @@ const GrowthOffer = () => {
   return (
     <section className="bg-gradient-to-r from-[#090b63] via-[#090b63] to-[#100934] py-16">
       <div className="max-w-6xl mx-auto bg-[url(/home/Homepage-08.webp)] bg-cover bg-center p-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10">Why Choose Us?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10">What We Offer:
+        </h2>
         <div className="grid grid-cols-1 gap-8">
           {services.map((service, index) => (
             <div

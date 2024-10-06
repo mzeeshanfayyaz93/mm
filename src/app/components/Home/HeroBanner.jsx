@@ -14,7 +14,7 @@ const HeroBanner = () => {
             <span className="font-black">Expert-Led Consulting Solutions </span>
             Exclusively for
           </h1>
-          <div className="relative w-full h-12 md:w-3/5 mx-auto md:h-14  xl:h-16">
+          <div className="relative w-full h-12 md:h-14  xl:h-16">
             <Image
               src="/home/logos1.webp"
               alt="MetaTrader 4"

@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Dialog, DialogPanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // Use usePathname to get current path
+import { useState, useEffect } from "react";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // Navigation Links
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: 'about-us' },
-  { name: 'Marketing', href: 'marketing-consultancy' },
-  { name: 'Risk', href: 'risk-management' },
-  { name: 'Technology', href: 'technology-consultancy' },
-  { name: 'Blogs', href: 'blogs' },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "about-us" },
+  { name: "Marketing", href: "marketing-consultancy" },
+  { name: "Risk", href: "risk-management" },
+  { name: "Technology", href: "technology-consultancy" },
+  { name: "Blogs", href: "blogs" },
 ];
 
 const Header = () => {
@@ -32,23 +32,29 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Determine if the current page is the home page or marketing consultancy page
-  const isTransparentPage = pathname === '/' || pathname === '/marketing-consultancy' || pathname === '/contact' || pathname === '/privacy-cookie-policy' || pathname === '/growth-expand';
+  const isTransparentPage =
+    pathname === "/" ||
+    pathname === "/marketing-consultancy" ||
+    pathname === "/contact" ||
+    pathname === "/privacy-cookie-policy" ||
+    pathname === "/growth-expand";
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 py-2 transition-all duration-300 ${isTransparentPage
+      className={`fixed inset-x-0 top-0 z-50 py-2 transition-all duration-300 ${
+        isTransparentPage
           ? isScrolled
-            ? 'bg-gradient-to-r from-[#0a0747] to-[#aa165e]' // Apply gradient when scrolled
-            : 'bg-transparent' // Apply transparent background when not scrolled
-          : 'bg-gradient-to-b from-[#0a0747] to-[#aa165e]' // Default gradient background for other pages
-        }`}
+            ? "bg-gradient-to-r from-[#0a0747] to-[#aa165e]" // Apply gradient when scrolled
+            : "bg-transparent" // Apply transparent background when not scrolled
+          : "bg-gradient-to-b from-[#0a0747] to-[#aa165e]" // Default gradient background for other pages
+      }`}
     >
-      <div className="container flex flex-row items-center justify-between">
+      <div className="container mx-auto flex flex-row items-center justify-between">
         {/* Logo */}
         <div className="relative w-48 h-20">
           <Link href="/">
@@ -75,8 +81,6 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
-          {/* Log in Button for Desktop */}
-
         </div>
         <div className="hidden lg:block lg:justify-end">
           <Link href="/contact" className="bg-primary rounded-full py-3 px-7 text-white shadow-2xl hover:bg-white hover:text-primary">

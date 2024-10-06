@@ -8,7 +8,8 @@ const GrowthSection = () => {
       <div className="max-w-6xl mx-auto text-center flex flex-col py-24 h-[600px] items-center justify-center border-b border-gray-50 border-opacity-10">
         {/* Heading Section */}
         <h2 className="text-2xl md:text-[45px] leading-normal font-bold text-white mb-4">
-          Unlock Growth & Expand into New Markets
+        Unlock Growth and Expand into New Markets
+
           <br />
           with <span className="text-secondary">EXPERT FOREX MARKETING SOLUTIONS</span>
         </h2>
