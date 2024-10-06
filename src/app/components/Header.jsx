@@ -49,7 +49,7 @@ const Header = () => {
       className={`fixed inset-x-0 top-0 z-50 py-2 transition-all duration-300 ${
         isTransparentPage
           ? isScrolled
-            ? "bg-gradient-to-r from-[#0a0747] to-[#aa165e]" // Apply gradient when scrolled
+            ? "bg-gradient-to-l from-[#0a0747] to-[#aa165e]" // Apply gradient when scrolled
             : "bg-transparent" // Apply transparent background when not scrolled
           : "bg-gradient-to-b from-[#0a0747] to-[#aa165e]" // Default gradient background for other pages
       }`}
