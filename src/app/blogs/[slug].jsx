@@ -1,54 +1,32 @@
-// blogs/[slug].jsx
-import BlogDetail from '../../components/BlogDetail'; // Assuming BlogDetail is the component for displaying the blog
+import { useParams } from 'next/navigation';
+import blogData from '../../../../public/blogs.json';
+import Image from 'next/image';
 
-export async function getStaticPaths() {
-  // Fetch or simulate your blog slugs here
-  const blogs = [
-    { slug: 'top-5-marketing-strategies-for-online-brokers-2024' },
-    { slug: 'how-to-mitigate-market-volatility-expert-tips' },
-    // Add more slugs as needed
-  ];
+const BlogDetail = () => {
+  const { slug } = useParams(); // Get slug from URL params
 
-  const paths = blogs.map((blog) => ({
-    params: { slug: blog.slug }, // Define slug parameter for each blog
-  }));
+  // Find the blog post that matches the slug
+  const blog = blogData.find((blog) => blog.slug === slug);
 
-  return { paths, fallback: false }; // fallback: false means other routes should 404
-}
-
-export async function getStaticProps({ params }) {
-  const { slug } = params;
-
-  // Fetch or simulate blog content based on slug
-  const blogData = {
-    'top-5-marketing-strategies-for-online-brokers-2024': {
-      title: 'Top 5 Marketing Strategies for Online Brokers in 2024',
-      content: 'This is the content of the marketing strategies blog...',
-    },
-    'how-to-mitigate-market-volatility-expert-tips': {
-      title: 'How to Mitigate Market Volatility: Expert Tips for Risk Management',
-      content: 'This is the content for mitigating market volatility...',
-    },
-    // Add more blog data as needed
-  };
-
-  const blog = blogData[slug];
-
+  // Handle the case where no blog post is found
   if (!blog) {
-    return { notFound: true }; // If blog not found, return 404
+    return <p className="text-center">Blog post not found</p>;
   }
 
-  return {
-    props: { blog }, // Pass blog data to the BlogDetail component
-  };
-}
-
-const BlogPost = ({ blog }) => {
   return (
-    <div>
-      <BlogDetail blog={blog} /> {/* Pass the blog data to BlogDetail component */}
+    <div className="max-w-6xl mx-auto py-16 px-4">
+      <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
+      <div className="relative w-full h-96 mb-6">
+        <Image
+          src={blog.imageSrc}
+          alt={blog.title}
+          fill
+          className="object-cover rounded-md"
+        />
+      </div>
+      {/* Display blog content here */}
     </div>
   );
 };
 
-export default BlogPost;
+export default BlogDetail;

@@ -2,6 +2,7 @@
   {
     "title": "Top 5 Marketing Strategies for Online Brokers in 2024",
     "imageSrc": "/blogs/Blog1.webp",
+    "slug": "top-5-marketing-strategies-for-online-brokers-2024",
     "content": [
       {
         "type": "heading",
@@ -91,6 +92,7 @@
   {
     "title": "How to Mitigate Market Volatility: Expert Tips for Risk Management",
     "imageSrc": "/blogs/Blog1.webp",
+    "slug": "how-to-mitigate-market-volatility",
     "content": [
       {
         "type": "heading",
@@ -180,6 +182,7 @@
   {
     "title": "The Future of Trading Technology: What Brokers Need to Know",
     "imageSrc": "/blogs/Blog1.webp",
+    "slug": "the-future-of-trading-technology-what-brokers-need-to-know",
     "content": [
       {
         "type": "heading",
@@ -269,6 +272,7 @@
   {
     "title": "How to Build a Strong Online Presence for Your Brokerage",
     "imageSrc": "/blogs/Blog1.webp",
+    "slug": "how-to-build-a-strong-online-presence-for-your-brokerage",
     "content": [
       {
         "type": "heading",
@@ -384,6 +388,7 @@
   {
     "title": "The Role of Artificial Intelligence in Modern Trading Platforms",
     "imageSrc": "/blogs/Blog2.webp",
+    "slug": "the-role-of-artificial-intelligence-in-modern-trading-platforms",
     "content": [
       {
         "type": "heading",
@@ -496,6 +501,7 @@
   {
     "title": "Understanding and Navigating Forex Regulations in Global Markets",
     "imageSrc": "/blogs/Blog1.webp",
+    "slug": "understanding-and-navigating-forex-regulations-in-global-markets",
     "content": [
       {
         "type": "heading",
