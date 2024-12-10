@@ -300,7 +300,7 @@ const KeyServices = () => {
                         </>
                         :
                         <>
-                            <div className="md:w-1/2 w-4/5mx-auto">
+                            <div className="md:w-1/2 w-4/5 mx-auto">
                                 {activeTab == "platform" &&
                                     <img src="/risk/risk-img1.webp" alt="" />
                                 }
