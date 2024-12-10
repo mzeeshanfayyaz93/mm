@@ -3,15 +3,39 @@ import Image from 'next/image';
 const RiskWhyChooseUsSection = () => {
     return (
         <section >
-            <div className="max-w-6xl mx-auto md:py-16 py-8 px-8 flex flex-col lg:flex-row items-center gap-12">
-                <div className="lg:w-1/2">
-                    <h2 className="text-4xl font-bold mb-6">Why Choose Market Mavens <span className='text-[#dc3d52]'>Risk Management?</span></h2>
-                    <p className="text-lg mb-4">
-                        Market Mavens stands out for its strategic focus on comprehensive risk management tailored specifically for online trading brokers. Our team’s deep understanding of the fintech sector ensures your brokerage can navigate risks effectively.
-                    </p>
-                    <p className="text-lg mb-4">
-                        Partnering with us means investing in the security and longevity of your business.
-                    </p>
+            <div className="max-w-6xl bg-[#eef0f3] mx-auto md:py-12 py-8 px-8 flex flex-col lg:flex-row items-center gap-12">
+                <div className="lg:w-1/2 text-primary">
+                    <h2 className="md:text-4xl text-2xl font-bold mb-6">What Sets Us Apart?</h2>
+                    <ul className="space-y-4">
+                        <li className="flex items-start space-x-3">
+                            <span className="text-green-500 text-xl font-bold">✔</span>
+                            <p>
+                                <strong>Industry Expertise:</strong> Our team has decades of
+                                experience in trading platforms and risk management.
+                            </p>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                            <span className="text-green-500 text-xl font-bold">✔</span>
+                            <p>
+                                <strong>Customized Solutions:</strong> Services tailored to meet
+                                the specific needs of your brokerage.
+                            </p>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                            <span className="text-green-500 text-xl font-bold">✔</span>
+                            <p>
+                                <strong>24/7 Support:</strong> Around-the-clock assistance for
+                                uninterrupted trading operations.
+                            </p>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                            <span className="text-green-500 text-xl font-bold">✔</span>
+                            <p>
+                                <strong>Proven Results:</strong> Trusted by brokers to enhance
+                                efficiency and profitability.
+                            </p>
+                        </li>
+                    </ul>
                 </div>
                 <div className="relative lg:w-1/2 w-full h-[300px]">
                     <Image
