@@ -255,75 +255,77 @@ const KeyServices = () => {
     };
 
     return (
-        <div className=" container mx-auto bg-gradient-to-r to-[#0e043a] via-[#0a0555] from-[#07066c] p-12">
-            <div className="max-w-6xl mx-auto">
-                <h1 className="md:text-4xl text-2xl font-bold md:mb-12 mb-8 text-center text-white">Key Services</h1>
-                <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 p-1 bg-white rounded-3xl">
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
-                            style={activeTab === tab.id ? {
-                                filter: "blur(.5px)",
-                                boxShadow: "0 11px 33px rgba(128, 31, 134, .9)"
-                            } : {}}
-                            className={`py-6 px-6 font-bold rounded-3xl ${activeTab === tab.id
-                                ? "bg-gradient-to-r  from-secondary via-[#090a62] to-primary text-white"
-                                : "text-primary hover:text-secondary "
-                                }`}
-                        >
-                            {tab.label}
-                        </button>
-                    ))}
+        <div className="bg-gradient-to-r to-[#0e043a] via-[#0a0555] from-[#07066c] p-12">
+            <div className=" container mx-auto ">
+                <div className="max-w-6xl mx-auto">
+                    <h1 className="md:text-4xl text-2xl font-bold md:mb-12 mb-8 text-center text-white">Key Services</h1>
+                    <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 p-1 bg-white rounded-3xl">
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id)}
+                                style={activeTab === tab.id ? {
+                                    filter: "blur(.5px)",
+                                    boxShadow: "0 11px 33px rgba(128, 31, 134, .9)"
+                                } : {}}
+                                className={`py-6 px-6 font-bold rounded-3xl ${activeTab === tab.id
+                                    ? "bg-gradient-to-r  from-secondary via-[#090a62] to-primary text-white"
+                                    : "text-primary hover:text-secondary "
+                                    }`}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 items-center bg-gradient-to-b to-[#66215b] blur-xs via-[#271160] from-[#090a62] px-8 py-10 rounded-b-3xl">
+                        {activeTab == "platform" || activeTab == "risk" ?
+                            <>
+                                <div>
+                                    {content[activeTab]}
+                                </div>
+                                <div className="md:w-1/2 w-4/5 mx-auto">
+                                    {activeTab == "platform" &&
+                                        <img src="/risk/risk-img1.webp" alt="" />
+                                    }
+                                    {activeTab == "bridge" &&
+                                        <img src="/risk/risk-img2.webp" alt="" />
+                                    }
+                                    {activeTab == "risk" &&
+                                        <img src="/risk/risk-img3.webp" alt="" />
+                                    }
+                                    {activeTab == "dealing" &&
+                                        <img src="/risk/risk-img4.webp" alt="" />
+                                    }
+
+                                </div>
+                            </>
+                            :
+                            <>
+                                <div className="md:w-1/2 w-4/5 mx-auto">
+                                    {activeTab == "platform" &&
+                                        <img src="/risk/risk-img1.webp" alt="" />
+                                    }
+                                    {activeTab == "bridge" &&
+                                        <img src="/risk/risk-img2.webp" alt="" />
+                                    }
+                                    {activeTab == "risk" &&
+                                        <img src="/risk/risk-img3.webp" alt="" />
+                                    }
+                                    {activeTab == "dealing" &&
+                                        <img src="/risk/risk-img4.webp" alt="" />
+                                    }
+
+                                </div>
+                                <div>
+                                    {content[activeTab]}
+                                </div>
+
+                            </>
+                        }
+                    </div>
                 </div>
-                <div className="grid grid-cols-1 gap-3 md:grid-cols-2 items-center bg-gradient-to-b to-[#66215b] blur-xs via-[#271160] from-[#090a62] px-8 py-10 rounded-b-3xl">
-                    {activeTab == "platform" || activeTab == "risk" ?
-                        <>
-                            <div>
-                                {content[activeTab]}
-                            </div>
-                            <div className="md:w-1/2 w-4/5 mx-auto">
-                                {activeTab == "platform" &&
-                                    <img src="/risk/risk-img1.webp" alt="" />
-                                }
-                                {activeTab == "bridge" &&
-                                    <img src="/risk/risk-img2.webp" alt="" />
-                                }
-                                {activeTab == "risk" &&
-                                    <img src="/risk/risk-img3.webp" alt="" />
-                                }
-                                {activeTab == "dealing" &&
-                                    <img src="/risk/risk-img4.webp" alt="" />
-                                }
-
-                            </div>
-                        </>
-                        :
-                        <>
-                            <div className="md:w-1/2 w-4/5 mx-auto">
-                                {activeTab == "platform" &&
-                                    <img src="/risk/risk-img1.webp" alt="" />
-                                }
-                                {activeTab == "bridge" &&
-                                    <img src="/risk/risk-img2.webp" alt="" />
-                                }
-                                {activeTab == "risk" &&
-                                    <img src="/risk/risk-img3.webp" alt="" />
-                                }
-                                {activeTab == "dealing" &&
-                                    <img src="/risk/risk-img4.webp" alt="" />
-                                }
-
-                            </div>
-                            <div>
-                                {content[activeTab]}
-                            </div>
-
-                        </>
-                    }
-                </div>
-            </div>
-        </div >
+            </div >
+        </div>
     );
 };
 
