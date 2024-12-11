@@ -104,8 +104,8 @@ const KeyServices = () => {
     const content = {
         platform: (
             <div className="text-white">
-                <h2 className="text-2xl font-bold mb-4">MT4/MT5 Platform Configuration</h2>
-                <p className="mb-4 font-thin text-gray-300">
+                <h2 className="md:text-2xl text-xl font-bold mb-4">MT4/MT5 Platform Configuration</h2>
+                <p className="mb-4 hidden md:block font-thin text-gray-300">
                     The foundation of a successful brokerage lies in its trading platform. Market Mavens provides
                     <span className=" text-white font-bold"> end-to-end MT4/MT5 setup and customization,</span> ensuring your platform is optimized for both
                     performance and usability.
@@ -146,8 +146,8 @@ const KeyServices = () => {
         ),
         bridge: (
             <div className="text-white">
-                <h2 className="text-2xl font-bold mb-4">Bridge Configuration</h2>
-                <p className="mb-4 font-thin text-gray-300">
+                <h2 className="md:text-2xl text-xl font-bold mb-4">Bridge Configuration</h2>
+                <p className="mb-4 hidden md:block font-thin text-gray-300">
                     Seamless connectivity is essential for efficient trade execution. Our  <span className=" text-white font-bold"> Bridge Configuration Services </span> ensure your platform integrates flawlessly with liquidity providers for accurate pricing and execution.
                 </p>
                 <div className=" text-gray-300 space-y-2">
@@ -180,8 +180,8 @@ const KeyServices = () => {
         ),
         risk: (
             <div className="text-white">
-                <h2 className="text-2xl font-bold mb-4">Risk Management Solutions</h2>
-                <p className="mb-4 font-thin text-gray-300">
+                <h2 className="md:text-2xl text-xl font-bold mb-4">Risk Management Solutions</h2>
+                <p className="mb-4 hidden md:block font-thin text-gray-300">
                     Protect your brokerage from unforeseen financial risks with our <span className=" text-white font-bold">  proactive risk management solutions. </span> Our team ensures you have the tools and strategies needed to monitor and control exposure effectively.
                 </p>
                 <div className=" text-gray-300 space-y-2">
@@ -220,8 +220,8 @@ const KeyServices = () => {
         ),
         dealing: (
             <div className="text-white">
-                <h2 className="text-2xl font-bold mb-4">Professional Dealing Desk</h2>
-                <p className="mb-4 font-thin text-gray-300">
+                <h2 className="md:text-2xl text-xl font-bold mb-4">Professional Dealing Desk</h2>
+                <p className="mb-4 hidden md:block font-thin text-gray-300">
                     Our <span className=" text-white font-bold"> 24/7 dealing desk service </span> ensures seamless trade execution and compliance, backed by real-time monitoring and market insights.
                 </p>
                 <div className=" text-gray-300 space-y-2">
@@ -255,9 +255,9 @@ const KeyServices = () => {
     };
 
     return (
-        <div className="bg-gradient-to-r to-[#0e043a] via-[#0a0555] from-[#07066c] p-12">
-            <div className=" container mx-auto ">
-                <div className="max-w-6xl mx-auto">
+        <div className=" bg-gradient-to-r to-[#0e043a] via-[#0a0555] from-[#07066c]">
+            <div className=" container mx-auto py-12">
+                <div className="max-w-6xl hidden md:block mx-auto">
                     <h1 className="md:text-4xl text-2xl font-bold md:mb-12 mb-8 text-center text-white">Key Services</h1>
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 p-1 bg-white rounded-3xl">
                         {tabs.map((tab) => (
@@ -323,8 +323,39 @@ const KeyServices = () => {
                             </>
                         }
                     </div>
-                </div>
-            </div >
+                </div >
+                <div className="max-w-6xl md:hidden block mx-auto">
+                    <h1 className="md:text-4xl text-2xl font-bold md:mb-12 mb-8 text-center text-white">Key Services</h1>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 items-center bg-gradient-to-b to-[#66215b] blur-xs via-[#271160] from-[#090a62] px-8 py-10 rounded-3xl">
+                        <div>
+                            {content["platform"]}
+                        </div>
+                        <div className="md:w-1/2 w-4/5 mx-auto">
+                            <img src="/risk/risk-img1.webp" alt="" />
+                        </div>
+                        <div className="mt-4">
+                            {content["bridge"]}
+                        </div>
+                        <div className="md:w-1/2 w-4/5 mx-auto">
+                            <img src="/risk/risk-img2.webp" alt="" />
+
+                        </div>
+                        <div className="mt-4">
+                            {content["risk"]}
+                        </div>
+                        <div className="md:w-1/2 w-4/5 mx-auto">
+                            <img src="/risk/risk-img3.webp" alt="" />
+
+                        </div>
+                        <div className="mt-4">
+                            {content["dealing"]}
+                        </div>
+                        <div className="md:w-1/2 w-4/5 mx-auto">
+                            <img src="/risk/risk-img4.webp" alt="" />
+                        </div>
+                    </div>
+                </div >
+            </div>
         </div>
     );
 };
