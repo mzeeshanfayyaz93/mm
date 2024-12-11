@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
+import 'react-phone-number-input/style.css'
 
 export const metadata: Metadata = {
   title: "Market Mavens - Hands On Experience",

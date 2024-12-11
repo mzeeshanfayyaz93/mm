@@ -2,33 +2,58 @@
 import { UserIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { CiMail } from 'react-icons/ci';
-import { BsGrid } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 import { GiWorld } from "react-icons/gi";
-import { TiMessages } from "react-icons/ti";
-import { AiOutlineMessage } from "react-icons/ai";
-import emailjs from "emailjs-com";
+import PhoneInput from 'react-phone-number-input'
+import { useState } from 'react';
+
 
 const ContactUsHeroSection = () => {
-    // const sendEmail = (e) => {
-    //     // e.preventDefault();
+    const [value, setValue] = useState("+971")
+    const [formData, setFormData] = useState(null)
+    const [loading, setLoading] = useState(false)
+    const [responseMessage, setResponseMessage] = useState("");
 
-    //     emailjs
-    //         .send(
-    //             "service_d17ip7e",    // Replace with your Service ID
-    //             "template_fe1ff54",   // Replace with your Template ID
-    //             { email: "adeelcomsats070@gmail.com" },
-    //             "hBEuQsrrqkn0STWmO"        // Replace with your User ID
-    //         )
-    //         .then(
-    //             (result) => {
-    //                 alert("Email sent successfully!");
-    //             },
-    //             (error) => {
-    //                 alert("Failed to send email. Try again later.");
-    //             }
-    //         );
-    // };
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true)
+        const payload = {
+            Name: `${formData?.firstName} ${formData?.lastName}`,
+            Email: formData?.email,
+            Phone: value + "" + formData?.phone,
+            Query: formData?.query,
+            Date: new Date(),
+            sheetName: "contact form"
+        }
+
+        try {
+            const response = await fetch("/api/contactForm", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
+            if (response.ok) {
+                setFormData(null);
+                setResponseMessage("Form submitted successfully!");
+            } else {
+                const error = await response.json();
+                setResponseMessage("Failed to submit the form. Please try again.");
+            }
+        } catch (error) {
+            setResponseMessage("An error occurred. Please try again.");
+        } finally {
+            setFormData({})
+            setLoading(false)
+        }
+    };
     return (
         <div>
             <section className="bg-gradient-to-r from-[#080a62] from-30%  to-secondary to-90% pt-28 3xl:pt-36 xl:pt-32 md:px-4 text-white relative">
@@ -54,7 +79,9 @@ const ContactUsHeroSection = () => {
             </section>
             {/* Form Section */}
             <div className=' relative -top-48'>
-                <div className="bg-white relative text-gray-700 rounded-3xl shadow-lg p-8 max-w-3xl mx-auto">
+                <form className="bg-white relative text-gray-700 rounded-3xl shadow-lg p-8 max-w-3xl mx-auto"
+                    onSubmit={handleSubmit}
+                >
                     {/* <form> */}
                     {/* First Name & Last Name */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -64,6 +91,10 @@ const ContactUsHeroSection = () => {
                                 type="text"
                                 className="w-full px-4 py-3 pl-9 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="First Name"
+                                name='firstName'
+                                value={formData?.firstName || ""}
+                                onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className=' relative'>
@@ -72,6 +103,9 @@ const ContactUsHeroSection = () => {
                                 type="text"
                                 className="w-full px-4 py-3 pl-9 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Last Name"
+                                name='lastName'
+                                value={formData?.lastName || ""}
+                                onChange={handleChange}
                             />
                         </div>
                     </div>
@@ -83,57 +117,65 @@ const ContactUsHeroSection = () => {
                             type="email"
                             className="w-full px-4 py-3 pl-9 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
                             placeholder="Email"
+                            name='email'
+                            value={formData?.email || ""}
+                            onChange={handleChange}
+                            required
                         />
                     </div>
 
                     <div className="grid grid-cols-3 gap-6 mb-6">
-                        <div className=' relative'>
-                            <BsGrid className='absolute top-4 left-3 text-gray-400 h-5 w-5' />
-                            <input
-                                type="email"
-                                className="w-full px-4 py-3 pl-9 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
-                                placeholder="Code"
+                        <div
+                            className="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+                        >
+                            <PhoneInput
+                                international
+                                countryCallingCodeEditable={false}
+                                defaultCountry="AE"
+                                value={value}
+                                onChange={(phone) => {
+                                    setValue(phone)
+                                }}
                             />
                         </div>
                         <div className='col-span-2 relative'>
                             <FiPhoneCall className='absolute top-4 left-3 text-gray-400 h-5 w-5' />
                             <input
-                                type="text"
+                                type="number"
                                 className="w-full px-4 py-3 pl-9 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Phone"
+                                name='phone'
+                                value={formData?.phone || ""}
+                                onChange={handleChange}
+                                required
                             />
                         </div>
                     </div>
 
                     {/* Country & Query */}
                     <div className="grid grid-cols-1 gap-6 mb-6">
-                        <div className='relative'>
-                            <GiWorld className='absolute top-4 left-3 text-gray-400 h-5 w-5' />
-                            <input
-                                type="text"
-                                className="w-full px-4 pl-9 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
-                                placeholder="Country"
-                            />
-                        </div>
-                        <div className=' relative'>
-                            <TiMessages className='absolute top-4 left-3 text-gray-400 h-5 w-5' />
-                            <input
-                                type="text"
-                                className="w-full px-4 pl-9 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
-                                placeholder="Query"
-                            />
+                        {/* Country Dropdown */}
+                        <div className="relative ">
+                            <GiWorld className="absolute top-4 left-3 text-gray-400 h-5 w-5" />
+                            <select
+                                name="query"
+                                className="w-full px-4 py-3 pl-9 border rounded-lg text-gray-700"
+                                required
+                                value={formData?.query || ""}
+                                onChange={handleChange}
+                            >
+                                <option value="">Query</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Risk Management">Risk Management</option>
+                                <option value="Technology">Technology </option>
+                            </select>
                         </div>
                     </div>
-
-                    {/* Message */}
-                    <div className="mb-6 relative">
-                        <AiOutlineMessage className='absolute top-4 left-3 text-gray-400 h-5 w-5' />
-                        <textarea
-                            className="w-full px-4 py-3 pl-9 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
-                            rows="4"
-                            placeholder="Message"
-                        ></textarea>
-                    </div>
+                    {responseMessage && (
+                        <div className="my-4">
+                            <p className="text-primary">{responseMessage}</p>
+                        </div>
+                    )}
 
                     {/* Submit Button */}
                     <div className="text-center -mb-12">
@@ -142,11 +184,11 @@ const ContactUsHeroSection = () => {
                             type="submit"
                             className="bg-gradient-to-r from-[#080a62] to-[#dc3d52] text-white font-semibold py-3 px-8 rounded-full text-lg"
                         >
-                            Submit
+                            {loading ? "Submitting.." : "Submit"}
                         </button>
                     </div>
                     {/* </form> */}
-                </div>
+                </form>
                 <div className='my-10'>
                     <img className='w-[400px] mx-auto ' src="/social.svg" alt="" />
                 </div>
