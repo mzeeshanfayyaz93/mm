@@ -21,6 +21,9 @@ module.exports = {
         semibold: 600,
         bold: 700,
       },
+      boxShadow: {
+        custom: '0 20px 30px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05)',
+      },
     },
   },
   plugins: [],

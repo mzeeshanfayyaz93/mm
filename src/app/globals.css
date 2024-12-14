@@ -67,3 +67,26 @@ body {
 .PhoneInputInput {
   outline: none;
 }
+.clip-hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.clip-hex {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.bg-fintech {
+  background-image: url("/home/fintech-bg.svg");
+  background-size: cover;
+}
+
+.bg-artist {
+  background-image: url("/home/artist-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-dna {
+  background-image: url("/home/dna-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}

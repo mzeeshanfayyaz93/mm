@@ -33,29 +33,31 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-[#f5f5f5] py-16 px-8">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-center text-[#080a62] mb-10">Frequently Asked Questions</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`border-b border-gray-200 pb-4 ${activeIndex === index ? "border-primary" : ""}`}
-            >
-              <button
-                className="w-full text-left flex items-center justify-between text-[#080a62] font-bold text-lg md:text-xl"
-                onClick={() => toggleFAQ(index)}
+    <div className="bg-[#f5f5f5]">
+      <section className=" container mx-auto py-10 ">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:3xl font-bold text-center text-primary mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6  text-primary">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className={`border-b border-gray-200 pb-4 ${activeIndex === index ? "border-primary" : ""}`}
               >
-                <span>{`${index + 1}. ${faq.question}`}</span>
-              </button>
-              {activeIndex === index && (
-                <p className="mt-4 text-gray-700">{faq.answer}</p>
-              )}
-            </div>
-          ))}
+                <button
+                  className="w-full text-left flex items-center justify-between text-primary font-medium text-lg md:text-xl"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <span>{`${index + 1}. ${faq.question}`}</span>
+                </button>
+                {activeIndex === index && (
+                  <p className="mt-4 text-sm">{faq.answer}</p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
