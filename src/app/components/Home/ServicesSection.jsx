@@ -121,7 +121,7 @@ const ServicesSection = () => {
 
         {/* Risk Section */}
         <div className="flex justify-end">
-          <div className="flex flex-wrap-reverse md:w-4/5 justify-between items-center mx-4 md:md-0 rounded-2xl p-6 md:p-12 border border-secondary md:rounded-tl-full md:rounded-bl-full md:border-r-0">
+          <div className="flex flex-wrap-reverse md:w-4/5 justify-between items-center mx-4 md:mx-0 rounded-2xl p-6 md:p-12 border border-secondary md:rounded-tl-full md:rounded-bl-full md:border-r-0">
             {/* Image */}
             <div className="max-w-4xl flex-col md:flex-row flex justify-between items-center">
 
