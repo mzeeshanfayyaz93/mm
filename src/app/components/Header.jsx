@@ -37,12 +37,7 @@ const Header = () => {
   }, []);
 
   // Determine if the current page is the home page or marketing consultancy page
-  const isTransparentPage =
-    pathname === "/" ||
-    pathname === "/marketing-consultancy" ||
-    pathname === "/contact" ||
-    pathname === "/privacy-cookie-policy" ||
-    pathname === "/growth-expand";
+  const isTransparentPage =pathname === '/marketing-consultancy' || pathname === '/contact' || pathname === '/privacy-cookie-policy' || pathname === '/growth-expand';
 
   return (
     <header
@@ -77,7 +72,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:gap-x-8 items-center">
           {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm font-normal leading-2 text-white">
+            <Link key={item.name} href={item.href} className={`text-sm font-normal leading-2 text-white`}>
               {item.name}
             </Link>
           ))}

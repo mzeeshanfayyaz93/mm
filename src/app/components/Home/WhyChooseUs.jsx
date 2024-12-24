@@ -84,8 +84,10 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-white container md:py-10 py-4 mx-auto">
       {/* Section Title */}
-      <h2 className="md:text-4xl text-2xl font-bold text-center text-primary mb-12">
-        Why Choose Us?
+      <h2 className="md:text-4xl text-2xl font-bold text-center mb-12">
+        <span className="text-transparent bg-clip-text w-fit bg-gradient-to-r to-secondary from-primary">
+          Why Choose Us?
+        </span>
       </h2>
 
       {/* Cards */}
