@@ -12,12 +12,12 @@ const ArtistSection = () => {
                             <span className="font-bold text-indigo-900">  ART!</span>{" "}<br />
                             and We are
                         </p>
-                        <h2 className="text-2xl md:text-6xl font-bold text-secondary">
+                        <h2 className="text-4xl md:text-6xl font-bold text-secondary">
                             <span className='font-black'>ARTISTS!</span>
                         </h2>
 
                         <p className="text-primary text-base md:text-xl mt-2 max-w-2xl mx-auto">
-                            We create a symphany of success for our client that beats woth their hearts.
+                            We create a symphany of success for our client that beats with their hearts.
                         </p>
                         <Link href='/contact' className="inline-block mt-8 bg-gradient-to-r from-[#080a62] to-[#dc3d52] hover:bg-gradient-to-l text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300">
                             Book Now

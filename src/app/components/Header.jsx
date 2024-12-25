@@ -53,7 +53,7 @@ const Header = () => {
         {/* Logo */}
         <div className="relative w-48 h-20">
           <Link href="/">
-            <Image src="/white-logo.webp" alt="Logo" fill className="object-contain" />
+            <Image src="/final-logo-white.png" alt="Logo" fill className="object-contain" />
           </Link>
         </div>
 
