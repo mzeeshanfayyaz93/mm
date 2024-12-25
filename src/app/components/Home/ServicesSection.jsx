@@ -1,10 +1,13 @@
+"use client"
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const OurServices = () => {
+  const router = useRouter()
   return (
     <section className="md:py-16 py-10 bg-[#f8f8f8] text-center">
       <div className="container mx-auto">
-        <h2 className="md:text-4xl text-2xl font-extrabold mb-12">
+        <h2 className="md:text-5xl text-3xl font-extrabold mb-12">
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-secondary from-primary uppercase">
             Our Services
           </span>
@@ -13,7 +16,7 @@ const OurServices = () => {
         <div className="grid grid-cols-1 max-w-5xl items-center mx-auto md:grid-cols-2 gap-x-12 gap-y-20 md:pt-4">
           {/* Marketing Text */}
           <div className="w-full mb-6 md:mb-0 text-center md:text-left order-1">
-            <h3 className="md:text-3xl text-xl font-extrabold mb-2">
+            <h3 className="md:text-4xl text-2xl font-extrabold mb-2">
               <span className=' text-transparent bg-clip-text bg-gradient-to-r to-secondary from-primary'>
                 MARKETING
               </span>
@@ -28,12 +31,18 @@ const OurServices = () => {
               Nice... Right!
             </p>
             <div className="mt-6 flex justify-center md:justify-start gap-4">
-              <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md">
-                Talk To Us
+              <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md"
+                onClick={() => {
+                  router.push("/contact")
+                }}
+              >
+                Contact Us
               </button>
               <button
-                href="#"
                 className="text-primary rounded-md text-sm border border-primary py-1.5 px-6"
+                onClick={() => {
+                  router.push("/marketing-consultancy")
+                }}
               >
                 Learn More
               </button>
@@ -60,7 +69,7 @@ const OurServices = () => {
 
           {/* Risk Text */}
           <div className="w-full mb-6 md:mb-0 text-center md:text-left order-4">
-            <h3 className="md:text-3xl text-xl font-extrabold mb-2">
+            <h3 className="md:text-4xl text-2xl font-extrabold mb-2">
               <span className=' text-transparent bg-clip-text bg-gradient-to-r to-secondary from-primary'>
                 Risk
               </span>
@@ -76,12 +85,18 @@ const OurServices = () => {
               That's True!
             </p>
             <div className="mt-6 flex justify-center md:justify-start gap-4">
-              <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md">
-                Talk To Us
+              <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md"
+                onClick={() => {
+                  router.push("/contact")
+                }}
+              >
+                Contact Us
               </button>
               <button
-                href="#"
                 className="text-primary rounded-md text-sm border border-primary py-1.5 px-6"
+                onClick={() => {
+                  router.push("/risk-management")
+                }}
               >
                 Learn More
               </button>
@@ -90,7 +105,7 @@ const OurServices = () => {
 
           {/* Technology Text */}
           <div className="w-full mb-6 md:mb-0 text-center md:text-left order-6">
-            <h3 className="md:text-3xl text-xl font-extrabold mb-2">
+            <h3 className="md:text-4xl text-2xl font-extrabold mb-2">
               <span className=' text-transparent bg-clip-text bg-gradient-to-r to-secondary from-primary'>
                 TECHNOLOGY
               </span>
@@ -104,12 +119,18 @@ const OurServices = () => {
               Does it make sense?
             </p>
             <div className="mt-6 flex justify-center md:justify-start gap-4">
-              <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md">
-                Talk To Us
+              <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md"
+                onClick={() => {
+                  router.push("/contact")
+                }}
+              >
+                Contact Us
               </button>
               <button
-                href="#"
                 className="text-primary rounded-md text-sm border border-primary py-1.5 px-6"
+                onClick={() => {
+                  router.push("/technology-consultancy")
+                }}
               >
                 Learn More
               </button>
@@ -162,7 +183,7 @@ export default OurServices;
 //               <p className="text-secondary font-bold">Nice... Right!</p>
 //               <div className="mt-6 flex gap-4">
 //                 <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md">
-//                   Talk To Us
+//                   Contact Us
 //                 </button>
 //                 <button href="#" className="text-primary rounded-md text-sm border border-primary  py-1.5 px-6">
 //                   Learn More
@@ -206,7 +227,7 @@ export default OurServices;
 //                 <p className="text-secondary font-bold">That's True!</p>
 //                 <div className="mt-6 flex gap-4">
 //                   <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md">
-//                     Talk To Us
+//                     Contact Us
 //                   </button>
 //                   <button href="#" className="text-primary rounded-md text-sm border border-primary  py-1.5 px-6">
 //                     Learn More
@@ -232,7 +253,7 @@ export default OurServices;
 //               <p className="text-secondary font-semibold">Does it make sense?</p>
 //               <div className="mt-6 flex gap-4">
 //                 <button className="to-[#0e043a] via-[#0a0555] from-[#07066c] bg-gradient-to-r text-white py-1.5 px-6 text-sm rounded-md">
-//                   Talk To Us
+//                   Contact Us
 //                 </button>
 //                 <button href="#" className="text-primary rounded-md text-sm border border-primary  py-1.5 px-6">
 //                   Learn More

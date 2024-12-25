@@ -7,7 +7,7 @@ const FintechExpertiseSection = () => {
         <div className="relative max-w-3xl text-center mx-auto flex flex-col md:flex-row z-10">
           {/* Left Text Section */}
           <div className=" w-full text-center">
-            <h2 className="text-2xl md:text-4xl font-bold text-[#080a62]">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#080a62]">
               <span className='text-transparent bg-clip-text w-fit bg-gradient-to-r to-secondary from-primary'>
                 Exclusive <br></br><span >Fintech Expertise</span>
               </span>
@@ -21,7 +21,7 @@ const FintechExpertiseSection = () => {
               We are one of the best experts & we feel proud saying this!
             </p>
             <Link href='/contact' className="inline-block mt-8 bg-gradient-to-r from-[#080a62] to-[#dc3d52] hover:bg-gradient-to-l text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300">
-              Book Now
+              Talk to Us
             </Link>
           </div>
 

@@ -4,9 +4,9 @@ import GradientButton from '../common/GradientButton'
 const ConsultationSection = () => {
   return (
     <section className="bg-white container mx-auto py-16 ">
-      <div className="max-w-5xl mx-auto text-center  md:h-[262px]">
+      <div className="max-w-5xl mx-auto text-center  md:min-h-[262px]">
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 max-w-xl mx-auto">
+        <h2 className="text-2xl md:text-5xl font-bold text-primary mb-6 max-w-3xl mx-auto">
           <span className='text-transparent bg-clip-text w-fit bg-gradient-to-r to-secondary from-primary'> Ready To Elevate Your </span><br></br>
           <span className='text-transparent bg-clip-text w-fit bg-gradient-to-r to-secondary from-primary'>Brokerage To New Heights? </span>
         </h2>

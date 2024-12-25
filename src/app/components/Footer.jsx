@@ -32,7 +32,7 @@ const Footer = () => {
     { src: '/logos/logos-32.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-33.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-34.svg', alt: 'Panda Trading' },
-    { src: '/logos/logos-35.svg', alt: 'Panda Trading' }, 
+    { src: '/logos/logos-35.svg', alt: 'Panda Trading' },
     { src: '/logos/logos-36.svg', alt: 'Panda Trading' },
   ];
 
@@ -55,11 +55,11 @@ const Footer = () => {
   ];
 
   const socialIcons = [
-    { component: FaFacebookF, href: '#' },
-    { component: FaTwitter, href: '#' },
-    { component: FaLinkedinIn, href: '#' },
+    { component: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61565753364493' },
+    { component: FaTwitter, href: 'https://x.com/market_mavens_' },
+    { component: FaLinkedinIn, href: 'https://www.linkedin.com/company/marketmavensio/' },
     { component: FaYoutube, href: '#' },
-    { component: FaInstagram, href: '#' },
+    { component: FaInstagram, href: 'https://www.instagram.com/marketmavens.io' },
   ];
 
   return (
@@ -81,8 +81,8 @@ const Footer = () => {
         </div>
 
         {/* Footer Links and Info */}
-               {/* Footer Links and Info */}
-               <div className="border-t border-gray-500 pt-8 grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
+        {/* Footer Links and Info */}
+        <div className="border-t border-gray-500 pt-8 grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
           {/* Logo and Tagline */}
           <div className="relative w-48 h-20">
             <Link href="/">
@@ -124,14 +124,14 @@ const Footer = () => {
         {/* Social Media and Copyright */}
         <div className="flex flex-col md:flex-row gap-x-2 items-center justify-between pt-10">
           <p className="text-xs text-center md:text-left md:text-sm pb-3 md:pb-0">
-          Market Mavens is a brand owned and operated by The Isic Group LLC FZ. 
-          Copyright @ 2024 The Isic Group LLC FZ
+            Market Mavens is a brand owned and operated by The Isic Group LLC FZ.
+            Copyright @ 2024 The Isic Group LLC FZ
           </p>
           <div className="flex space-x-2">
             {socialIcons.map((icon, index) => {
               const IconComponent = icon.component;
               return (
-                <a key={index} href={icon.href}>
+                <a key={index} href={icon.href} target='_blank'>
                   <IconComponent
                     size={28}
                     className=" bg-white rounded-full text-primary hover:bg-secondary hover:text-white p-2"
