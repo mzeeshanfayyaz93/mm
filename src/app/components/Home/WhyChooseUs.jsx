@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
 
       {/* Cards */}
       <div className="max-w-3xl mx-auto">
-        <img src="/home/why-choose-us.svg" alt="" />
+        <img src="/home/why-chhose-us-new.svg" alt="" />
       </div>
     </section>
   );
