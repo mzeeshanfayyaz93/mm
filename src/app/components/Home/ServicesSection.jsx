@@ -71,7 +71,7 @@ const OurServices = () => {
           <div className="w-full mb-6 md:mb-0 text-center md:text-left order-4">
             <h3 className="md:text-4xl text-2xl font-extrabold mb-2">
               <span className=' text-transparent bg-clip-text bg-gradient-to-r to-secondary from-primary'>
-                Risk
+                RISK
               </span>
             </h3>
             <p className="text-primary md:text-lg text-base text-center md:text-left mb-2">
