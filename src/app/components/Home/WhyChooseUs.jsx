@@ -84,7 +84,7 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-white container md:py-10 py-4 mx-auto">
       {/* Section Title */}
-      <h2 className="md:text-5xl text-3xl font-bold text-center mb-12">
+      <h2 className="md:text-5xl text-3xl font-bold text-center mb-4">
         <span className="text-transparent bg-clip-text w-fit bg-gradient-to-r to-secondary from-primary">
           Why Choose Us?
         </span>
@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
 
       {/* Cards */}
       <div className="max-w-3xl mx-auto">
-        <img src="/home/why-chhose-us-new.svg" alt="" />
+        <img src="/home/new-choose-us.webp" alt="" />
       </div>
     </section>
   );
