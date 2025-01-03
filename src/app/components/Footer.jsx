@@ -125,7 +125,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-x-2 items-center justify-between pt-10">
           <p className="text-xs text-center md:text-left md:text-sm pb-3 md:pb-0">
             Market Mavens is a brand owned and operated by The Isic Group LLC FZ.
-            Copyright @ 2024 The Isic Group LLC FZ
+            Copyright @ 2025 The Isic Group LLC FZ
           </p>
           <div className="flex space-x-2">
             {socialIcons.map((icon, index) => {
