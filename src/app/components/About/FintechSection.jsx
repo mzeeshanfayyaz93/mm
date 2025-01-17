@@ -5,7 +5,13 @@ const FintechSection = ({ title, description, buttonText }) => {
     <section className="bg-white">
       <div className="max-w-6xl mx-auto text-center py-10 md:py-20 px-4 bg-[url(/about/bg-2.webp)] bg-cover bg-center">
         {/* Title */}
-        <h2 className="text-2xl md:text-[35px] xl:text-[45px] font-bold text-[#080a62] mb-4 max-w-4xl mx-auto leading-normal">{title}</h2>
+        <div className="text-center">
+            <h2 className="bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text text-[20px] font-[600] lg:text-[30px] 2xl:text-[30px] uppercase max-w-lg md:leading-[35px]">
+           {title}
+
+
+          </h2>
+            </div>
         
         {/* Description */}
         <p className="text-base md:text-lg mb-6 max-w-xl mx-auto py-5">

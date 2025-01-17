@@ -45,6 +45,7 @@
 /* Apply the font family globally */
 body {
   font-family: "ReadexPro", sans-serif;
+  color: #080a62;
 }
 
 @layer utilities {

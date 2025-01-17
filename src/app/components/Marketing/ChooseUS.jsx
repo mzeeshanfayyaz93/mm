@@ -4,17 +4,17 @@ import Image from 'next/image';
 const ChooseUS = () => {
   return (
     <section className="relative">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-12 bg-gradient-to-r from-[#090b63] to-[#0f0936] p-4 md:p-10 my-12">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-12 bg-white p-4 md:p-10 my-12">
         
         {/* Left Text Section */}
         <div className="lg:w-1/2">
-          <h2 className="text-2xl md:text-5xl font-bold mb-4 pt-5 text-white">
-            Why Choose <br/><span className="text-[#d73c52]">Market Mavens?</span>
+          <h2 className="text-2xl md:text-3xl mb-4 pt-5 text-primary">
+            Why Choose <br/><span className="bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text text-[20px] font-[800] lg:text-[30px] 2xl:text-[40px] capitalize max-w-4xl md:leading-[45px]">Market Mavens?</span>
           </h2>
-          <p className="text-sm md:text-lg text-white mb-6">
+          <p className="text-sm md:text-lg mb-6">
             At Market Mavens, our marketing consultancy services are designed to empower online trading brokers with the tools they need to succeed in a highly competitive environment. Our team combines deep fintech expertise with creative strategies and a commitment to delivering measurable results.
           </p>
-          <p className="text-sm md:text-lg text-white">
+          <p className="text-sm md:text-lg">
             When you partner with us, you’re not just getting a marketing consultant—you’re gaining a strategically dedicated team to drive your brokerage’s growth and profitability.
           </p>
         </div>

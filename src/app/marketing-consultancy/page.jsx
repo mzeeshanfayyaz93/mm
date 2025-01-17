@@ -1,4 +1,7 @@
-import MarketingConsultancy from '../components/Marketing/MarketingConsultancy';
+import MarketingBrand from '../components/Marketing/MarketingBrand';
+import MarketingBanner from '../components/Marketing/MarketingBanner'
+import ExpertPartnerSection from '../components/Marketing/ExpertPartnerSection'
+import MarketingFile from '../components/Marketing/MarketingFile'
 import KeyServices from '../components/Marketing/KeyServices';
 import WhyChooseSection from '../components/Marketing/WhyChooseSection';
 import FintechSection from '../components/About/FintechSection';
@@ -13,9 +16,13 @@ export const metadata = {
   export default function About() {
     return (
       <main>
-       <MarketingConsultancy />
+
+       <MarketingBanner />
+       <ExpertPartnerSection />
        <KeyServices />
+       <MarketingFile />
        <WhyChooseSection />
+       <MarketingBrand />
         <ChooseUS />
        <FintechSection
         title="Where Fintech Expertise Meets Precision!"

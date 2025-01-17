@@ -14,8 +14,8 @@ const WhyChooseSection = () => {
   return (
     <>
       <SocialMediaSection setActive={setActive} active={active} />
-      <section className="max-w-[1135px] mx-auto bg-gradient-to-r from-[#0c0e57] to-[#c6334a] py-12 md:p-12 p-6 text-white">
-        <h2 className="text-3xl font-bold mb-6">
+      <section className="max-w-[1135px] mx-auto md:py-12 py-6 px-5 md:px-0">
+        <h2 className="text-lg md:text-3xl font-bold mb-6">
           {filterData?.Overview || ""}
         </h2>
         <p className="mb-6">
